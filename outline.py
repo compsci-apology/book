@@ -14,7 +14,7 @@ and the trevails of our ancestors is essential for avoiding the numerous
 patterns of self-deception which arise naturally as a consequence of
 being a materialized, embodied being without total faith in the laws of 
 physics - that such a book would respect the 80 character limit, in case any
-of our venerable ancestors still communicate by means of tty devices.
+of our venerable progeny still communicate by means of tty devices.
 """
 
 
