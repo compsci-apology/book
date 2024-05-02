@@ -100,7 +100,7 @@ supports_2 = """
  * 
  *  Each layer is a lossy compression of the layer below it.  Beliefs are compressions of groups of memories, themselves compressions of groups of experiences.
  *  
- * a hierarchical structure to a concep tnetwork allows for safer and more efficent evolution of it, because one component can be changed, or replaced entirely, with a limited 'blast radius'. Absent the hierarchical structure, making discrete changes becomes impossible.
+ * a hierarchical structure to a concept network allows for safer and more efficent evolution of it, because one component can be changed, or replaced entirely, with a limited 'blast radius'. Absent the hierarchical structure, making discrete changes becomes impossible.
  *   * 
  * abstract concepts are necessarily values because they tell us what to pay attention to and what to ignore. Fact vs value is a continuum, not a binary distinction.
  *  * 
