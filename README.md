@@ -2,6 +2,11 @@
 
 This book is an argument that computer science acts as a bridge from materialism to ancient, widely held "spirtual" truths which have been considered increasingly unfashionable over the last few centuries.
 
+This book is being writen as an hierarchical network of concpets, using computer code. This is because
+
+1. the thesis of the book is that this sort of structure helps conceptual networks evolve, and
+2. this format allows the logical structure of the book to remain intact and consistent while presenting this logical structure to readers in various forms
+
 The closest contemporary scholarly source for these ideas would be Cambridge AI Researcher Joscha Bach.
 
 > "what “spirit” actually means: It’s an operating system for an autonomous robot. And when the word was invented, people needed this word, but they didn’t have robots that built themselves yet; the only autonomous robots that were known were people, animals, plants, ecosystems, cities and so on. And they all had spirits. And it makes sense to say that a plant is an operating system, right? If you pinch the plant in one area, then it’s going to have repercussions throughout the plant. Everything in the plant is in some sense connected into some global aesthetics, like in other organisms. An organism is not a collection of cells; it’s a function that tells cells how to behave. And this function is not implemented as some kind of supernatural thing, like some morphogenetic field, it is an emergent result of the interactions of each cell with each other cell."

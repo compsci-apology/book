@@ -1,37 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List
+from framework import Argument
 
-"""
-The only feasible way to write a book like this is with a real programming
-language.
-
-It is entirely fitting that a book claiming 'explicitly hierarchical conceptual
-structures are better at evolving' would be written via an evolutionary
-process that made use of explicitly hierarchical conceptual structures.
-
-It is also entirely fitting that a book claiming 'reverence for history
-and the trevails of our ancestors is essential for avoiding the numerous
-patterns of self-deception which arise naturally as a consequence of
-being a materialized, embodied being without total faith in the laws of 
-physics - that such a book would respect the 80 character limit, in case any
-of our venerable ancestors still communicate by means of tty devices.
-"""
-
-
-@dataclass
-class Argument:
-  thesis: str
-  # possibly have a 'terms' section here, since in many cases terms are proposed, or
-  # re-jiggered slightly from traditional definitions
-  supports: List[str] = field(default_factory=list)
-
-
+from chapter1 import strategies_evolve
 root = Argument(
-  thesis = "Wisdom Traditions are Computational Strategies for Life",
+  "Wisdom Traditions are Computational Strategies for Life",
   supports = [
-    Argument(
-      "Belief systems are strategies organisms use to survive and thrive."
-      ),
+    strategies_evolve,
     Argument(
       "Hierarchical structures of increasingly abstract concepts "\
           "allow for belief systems to safely evolve."
@@ -208,3 +181,5 @@ support_6 = """
  *  Faith that you will be OK no matter what reduces the energy spent fretting or worrying.
  *  
  *  Grace is a technique of modeling yourslf as being guided by something which is wiser and more intelligent than you are. It works because the 'grace' concepts generates predictions that go outside the scope of your own understanding of yourself."""
+
+if __name__ == '__main__': print(root.to_markdown_list())
