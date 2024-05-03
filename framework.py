@@ -19,6 +19,7 @@ of our venerable ancestors still communicate by means of tty devices.
 
 # todo: add in concepts like Example, Reference, Implication
 
+HEADER_LEVELS = 3
 @dataclass
 class Argument:
   thesis: str
@@ -29,20 +30,26 @@ class Argument:
 
 
   # turn this argument into a markdown numerical list
-  def to_markdown_list(self, indent_level=0, header_num=0):
+  def to_markdown_list(self, level=0, header_num=0):
     # markdown lists use an indentation of 4 spaces
-    root_spaces = ' '*indent_level*4
-    support_spaces = ' '*((indent_level+1)*4)
 
     # humans generally count from 1 for some reason
     header_num = header_num +1
+    if level < HEADER_LEVELS:
+      header = '#'*(level+1) + f' {self.thesis} '
+    else:
+      root_spaces = spaces_per_level(level)
+      support_spaces = spaces_per_level(level+1)
+      header = f'{root_spaces}{header_num}. {self.thesis}'
 
-    header = f'{root_spaces}{header_num}. {self.thesis}'
     supports = [
-      s.to_markdown_list(indent_level+1, header_num=i) if isinstance(s, Argument) else\
+      s.to_markdown_list(level+1, header_num=i) if isinstance(s, Argument) else\
           f'{support_spaces}{i}. {s}' for i, s in enumerate(self.supports)
     ]
     return '\n'.join([header] + supports)
 
-
+def spaces_per_level(level:int):
+  if level < HEADER_LEVELS:
+    return ''
+  return ((level-HEADER_LEVELS)*4)*' '
 

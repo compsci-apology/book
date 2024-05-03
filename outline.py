@@ -2,7 +2,7 @@ from framework import Argument
 
 from chapter1 import strategies_evolve
 root = Argument(
-  "Wisdom Traditions are Computational Strategies for Life",
+  "There computational reasons to believe there is an optimal way of being",
   supports = [
     strategies_evolve,
     Argument(
