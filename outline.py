@@ -3,7 +3,7 @@ from framework import Argument
 from strategies import strategies_evolve
 from hierarchy import hierarchy_improves_evolution
 root = Argument(
-  "There computational reasons to believe there is an optimal way of being",
+  "There are computational reasons to believe there is an optimal way of being",
   supports = [
     strategies_evolve,
     hierarchy_improves_evolution,
