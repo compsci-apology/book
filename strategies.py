@@ -1,23 +1,43 @@
 from framework import Argument as A
+from framework import Example as E
 
 
 root = "Belief systems are strategies used by organisms"
 
 
 beliefs_are_strategies = A("Software systems and belief systems are both encoded strategies.", [
-        A("belief systems tell a person how to act in a given context"),
-        A("software systems tell a microprocessor how to act in a given context."),
+        E("belief systems tell a person (or group thereof) how to act in a given context"),
+        E("software systems tell a microprocessor how to act in a given context."),
     ])
 
 model_robots = A("All organisms and their strategies share traits in common which can be understood with an abstract model.",  [
-      A("We can consider all of these a being robots controlled by software.", [
-        A("navigating high dimensional spaces"),
-        A("use sense organs to get information about their environemnt (input)"),
-        A("integrated by concept-networks (processing)"),
-        A("with integration and action controlled by startegies which actuators. (output)"),
+      A("We can consider all of these as being robots, with 'bodies' controlled by software.", [
+        A("organisms have bodies, i.e. physical structures with mechanical degrees of freedom"),
+        A("these bodies navigate spaces", [
+          A("the basic 3d space navigated by animals and human beings"),
+          A("but also higher-dimensional spaces of things like absrtract tradeoffs", [
+            A("A business navigates the space of possible markets to participate in"),
+            A("what 'sort of messaging should we send'"),
+            A("where should we invest our capital this year?"),
+            A("what kind of employees should we hire?"),
+           ])
+        ]),
+        A("organisms sense organs to get information about their environemnt (input)", [
+          E("Sense organs like eyes, ears, etc"),
+          E("Telescopes, microscopes, cameras"),
+          E("Sensor networks, like windmills or social media networks"),
+        ]),
+        A("integrated by concept-networks (processing)", [
+          A("This includes human beings looking at information and making decisions")
+          ]),
+        A("controlling actuators by constraining their degress of freedom  (output)", [
+          A("Muscles move bones by contracting, i.e. adding tension that reduces degrees of freedom"),
+          A("A thermostat species whether the furance or a/c system should be on or off"),
+          A("A engineering department specifies which priorties they will invest in this quarter"),
+        ]),
       ]),
-      A("This model will allow us to understand the common computational problems that all of these diverse systems have to solve", [
-        A("they must model their environment"), 
+      A("This model will allow us to understand the **common computational problems that all of these organisms must solve**", [
+        A("they must model their enviornment and their relationship to it"), 
         A("they must navigate away from threats"),
         A("the must navigate towards opportunities."),
       ]),
@@ -27,6 +47,9 @@ model_robots = A("All organisms and their strategies share traits in common whic
         A("This means they must evaluate _tradeoffs_ because energy spent in one area cannot be spent elsewhere"),
        ]),
     ])
+
+
+# is this the place to add in turing completeness?
 
 # say later
 physics_is_a_value_system = A("Note that physical laws themselves consistute a value system (according to the above defintion).", [
@@ -62,12 +85,14 @@ model_values =  A("The fact/value distinction is more useful as a spectrum", [
       ]),
 ])
 
-strategies_evolve = A("Some strategies can include their own evolution", [
+strategies_evolve = A("Some strategies can themselves evolve", [
     A("some organisms - those that live in specific, static niches - do not need to change much over time in order to survive."),
-    A("other organisms operate in **dynamic niches that change over time**, which requires them to evolve their belief systems in order to survive."),
+    A("other organisms operate in **dynamic niches**  (i.e., niches that change over time), which **requires them to evolve their strategies** in order to survive."),
     A("Evolving a belief system means changing beliefs, i.e. learning and unlearning concepts."),
-    A("It is difficult to get these changes right."),
-    A("Failing to change, or changing in the wrong way, both mean death."),
+    A("It is difficult to get these changes right.", [
+      A("Failing to change means death because the environment changes in ways that break your strategy"),
+      A("Changing the wrong way means breaking your strategy's alignment with the current environment"),
+    ]),
     A("**Not all strategies are equally capable of evolving, for computational reasons.**")
   ])
 

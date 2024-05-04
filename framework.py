@@ -53,3 +53,7 @@ def spaces_per_level(level:int):
     return ''
   return ((level-HEADER_LEVELS)*4)*' '
 
+
+# an Example is another kind of argument
+# we denote these explicitly for a number of reasons
+class Example(Argument): pass

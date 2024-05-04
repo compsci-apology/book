@@ -1,14 +1,12 @@
 from framework import Argument
 
-from chapter1 import strategies_evolve
+from strategies import strategies_evolve
+from hierarchy import hierarchy_improves_evolution
 root = Argument(
   "There computational reasons to believe there is an optimal way of being",
   supports = [
     strategies_evolve,
-    Argument(
-      "Hierarchical structures of increasingly abstract concepts "\
-          "allow for belief systems to safely evolve."
-      ),
+    hierarchy_improves_evolution,
     Argument(
       "Belief systems constitute value claims, and cannot be "\
           "empirically tested unless they are contextually constrained"
@@ -34,38 +32,6 @@ root = Argument(
     )
   ]
 )
-
-supports_1 = """ 
- * "Software systems and belief systems are both encoded survival + growth strategies.
- * 
- *  belief systems tell a person how to act in a given context; software systems tell a microprocessor how to act in a given context.
- *   * 
- * Values are constraints on possibility space. Whenever a space of possibilities is constrained to some specific outcome, we can say that some value is in operation. It is useful to understand the similarites between all such cases, even those that do not traditionally seem like 'values.'
- * 
- * The fact/value distinction is not binary, but more of a continuum. It would be better understood as 'concrete vs abstract', with all fact claims containing some implicit values, and all value claims implying certain facts.
- * 
- *  The fact / value distinction is similar to the data vs code distinction in software: it's a natural consequence of evolutionary pressure. Representing our values as learnable, updatable beliefs allows for faster, cheaper evolution of software systems. *  
- * 
- * Changing environments require changing beliefs, just like changing business requirements drives changes in software systems.
- * 
- * we can use a simple, generic model of humans, businesses, and societies being robots navigating high dimensional spaces using sense organs to get information abou their environemnt, integrated by concept-networks to drive actuators. 
- * 
- * This model will allow us to understand the common problems that all of these diverse systems have to share: they must model their environment, navigate away from threats and towards opportunities.
-
- * another advantage of this generic model is that we can remember that these robots always exist in the physical universe. Thus, all robots need to solve the problem of reliably obtaining enough energy to keep themselves alive, and they will always be under selective pressure to be more energetically efficient. 
- * 
- * Note that physical laws themselves consistute a value system (according to the above defintion) because they constrain the space of possible outcomes into specific actualities. Out of all the possible tracetories a ball could follow when tossed in the air, it will tend to closely approximate a parabola.
- * 
- *  with this framework in mind, we can then model the evolution of strategies as consisting of an evolutinoary approxmation of the laws of physics themselves, plus the additional assumption of "i exist and will continue to participate in the future."
-
- * some organisms - those that live in specific, static niches - do not need to change much over time in order to survive. 
-
- * other organisms operate in dynamic niches that change over time, which requires them to evolve their belief systems in order to survive. Evolving a belief system means changing beliefs, i.e. learning and unlearning concepts.
-
- * It is difficult to get these changes right. 
- * 
- * Failing to change, or changing in the wrong way, both mean death.
-  """
 
 
 supports_2 = """
