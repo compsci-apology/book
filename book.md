@@ -40,7 +40,7 @@
     2. Changing the wrong way means breaking your strategy's alignment with the current environment
 5. **Not all strategies are equally capable of evolving, for computational reasons.**
 ## Hierarchically Composed Strategies Are Better Evolving Themselves 
-### A speicfic hierarchical structure improves the evolvability of conceptual networks 
+### A specific hierarchical structure maximizes the evolvability of conceptual networks 
 1. with the correct hierarchical structure, one component can be changed, or replaced entirely, with a limited 'blast radius'
     1. A 'parent' concept can remain identical, while the 'child' concept is repalced entirely
     2. This can work safely if the parent-child relationship is context-specific
@@ -59,7 +59,7 @@
 3. Organisms that operate in multiple, distinct, changing environments will be selected for this hierarchical structure
     1. This conceptual structure allows for faster learning inindividual environments, thus faster adaptation to change
     2. This conceptual structure allows for generalization across environments, lowering the energy cost of learning
-### Memories, beliefs, and abstract concepts exist in a hierarchy of abstraction. 
+### Memories, beliefs, and abstract concepts exist in a hierarchy of abstraction roughly matching that which maxizes evolvability. 
 1. Each layer is a lossy compression of the layer below it
     1. Our senses give us only meaningless impressions
     2. Experiences are compressions of groups of impressions

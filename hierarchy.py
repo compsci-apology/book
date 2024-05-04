@@ -3,7 +3,7 @@ from framework import Example as E
 
 root = "Hierarchically Composed Strategies Are Better Evolving Themselves"
 
-hierarchy_enables_discrete_change = A("A speicfic hierarchical structure improves the evolvability of conceptual networks", [
+hierarchy_enables_discrete_change = A("A specific hierarchical structure maximizes the evolvability of conceptual networks", [
   A("with the correct hierarchical structure, one component can be changed, or replaced entirely, with a limited 'blast radius'", [
     A("A 'parent' concept can remain identical, while the 'child' concept is repalced entirely"),
     A("This can work safely if the parent-child relationship is context-specific", [
@@ -31,7 +31,7 @@ hierarchy_enables_discrete_change = A("A speicfic hierarchical structure improve
 ])
 
 
-human_cognitive_structure_is_hierarchical =  A("Memories, beliefs, and abstract concepts exist in a hierarchy of abstraction.", [
+human_cognitive_structure_is_hierarchical =  A("Memories, beliefs, and abstract concepts exist in a hierarchy of abstraction roughly matching that which maxizes evolvability.", [
   A("Each layer is a lossy compression of the layer below it", [
     A("Our senses give us only meaningless impressions"),
     A("Experiences are compressions of groups of impressions"), # todo: add reference to hindu mythology on bodies being accumulations of sense impressions
