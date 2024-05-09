@@ -10,7 +10,7 @@
         1. the basic 3d space navigated by animals and human beings
         2. but also higher-dimensional spaces of things like absrtract tradeoffs
             1. A business navigates the space of possible markets to participate in
-            2. what 'sort of messaging should we send'
+            2. what sort of messaging should we send?
             3. where should we invest our capital this year?
             4. what kind of employees should we hire?
     3. organisms sense organs to get information about their environemnt (input)
@@ -39,6 +39,30 @@
     1. Failing to change means death because the environment changes in ways that break your strategy
     2. Changing the wrong way means breaking your strategy's alignment with the current environment
 5. **Not all strategies are equally capable of evolving, for computational reasons.**
+## Software Evolves Faster Than Hardware 
+### Evolution requires energetic investment 
+1. Changing a house to improve some experience requires labor and materials
+2. Releasing a new product to market requires investment
+3. Developers take time to write, compile and test code
+4. Performing a release takes time and attention
+### An abstraction of a system is a lossy compression of that system 
+1. Abstractions, by considering only some information relevant, constrain the space of possible features that could be considered
+2. Thus, **abstractions are values**.
+### Changing an abstraction is cheaper 
+1. The ENIAC was changed to use a stored program model of execution to reduce cycle cost
+    1. Moving the cables around between programs was expensive and costly
+    2. Changing which program was stored in memory was cheaper
+    3. Fixing the cables in place made the machine slower to operate, but faster to evolve
+2. Changing a blueprint is easier and cheaper than building a prototype
+3. Building a prototype from a blueprint is cheaper than performing the construction
+4. Describing a set of features is easier and cheaper than implementing those features
+### Using abstractions adds a new risk category 
+1. Evolving an abstraction in a way that improves its fitness might not map onto a base-layer change that _also_ improves fitness
+### Abstraction functions can _also_ evolve 
+1. Because abstraction has a cost and risk, abstraction functions themselves can evolve
+    1. An architect might shift to a new style of blueprints which is faster to make and change
+    2. The 'annual spring reorg' at Google
+    3. Software engineers might refactor code to produce the same results in a way that's eaiser to change in the future
 ## Hierarchically Composed Strategies Are Better Evolving Themselves 
 ### A specific hierarchical structure maximizes the evolvability of conceptual networks 
 1. with the correct hierarchical structure, one component can be changed, or replaced entirely, with a limited 'blast radius'
@@ -49,13 +73,15 @@
         1. The x86 architecture can run anything
         2. An operating system will only run programs fitting a certain format, respecting certain syscalls.
         3. A browser will only run html + javascript + css (i.e. a specific subset of programs)
-        4. An opinion javascript web framework will only run spcific kinds of javascript objects
+        4. A javascript web framework will only run spcific kinds of javascript objects
         5. A confirmation diaglog box expects a certain kind of application state to modify
 2. Absent the correct hierarchical structure, making discrete changes becomes impossible in large systems
     1. If a change anywhere in a concept network could effect behavior in any context, the risk of changes reducing fitness goes up
     2. One conseuqence of this is that **large systems with incorrectly defined hierarchies become incapable of change**
     3. The only way a large hierachy can continually evolve is if the top layers are extremely lightweight and flexible
-        1. Otherwise, changes at the top will break the bottom in many ways, some of which are hard to recognize
+        1. The layers at the top need to be almost _unopinionated_ about what happens at the bottom
+        2. instead they should focus primarily on conflict resolution between intermediary layers
+        3. Otherwise, changes at the top will break the bottom in many ways, some of which are hard to recognize
 3. Organisms that operate in multiple, distinct, changing environments will be selected for this hierarchical structure
     1. This conceptual structure allows for faster learning inindividual environments, thus faster adaptation to change
     2. This conceptual structure allows for generalization across environments, lowering the energy cost of learning
@@ -66,7 +92,6 @@
     3. Memories are compressiosn of groups of experiences
     4. Beliefs are compressions of groups of memories
     5. Concepts are compressions of groups of beliefs
-## Belief systems constitute value claims, and cannot be empirically tested unless they are contextually constrained 
 ## Abstract beliefs as organizing principles are necessary for group survival. 
 ## Trust in the organizing principle of the group is necessary for group cohesion 
 ## The evolutionary limit of "trust in the organizing principle" is trusting reality itself. 

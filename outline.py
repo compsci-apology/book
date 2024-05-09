@@ -1,18 +1,16 @@
 from framework import Argument
 
 from strategies import strategies_evolve
+from software import software_evolves_faster
 from hierarchy import hierarchy_improves_evolution
 root = Argument(
   "There are computational reasons to believe there is an optimal way of being",
   supports = [
     strategies_evolve,
+    software_evolves_faster,
     hierarchy_improves_evolution,
-    Argument(
-      "Belief systems constitute value claims, and cannot be "\
-          "empirically tested unless they are contextually constrained"
-      ),
     # TODO: Need an argument that large organisms are always composed of 
-    # smaller ones for the reasons given above, that hierarchical structure
+    # smaller ones, for the reasons given above: hierarchical structure
     # improves evolvability - or is that the same argumente as this one below?
     Argument(
       "Abstract beliefs as organizing principles are necessary for group "\

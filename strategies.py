@@ -1,4 +1,5 @@
 from framework import Argument as A
+from framework import Defintion as D
 from framework import Example as E
 
 
@@ -12,14 +13,14 @@ beliefs_are_strategies = A("Software systems and belief systems are both encoded
 
 model_robots = A("All organisms and their strategies share traits in common which can be understood with an abstract model.",  [
       A("We can consider all of these as being robots, with 'bodies' controlled by software.", [
-        A("organisms have bodies, i.e. physical structures with mechanical degrees of freedom"),
-        A("these bodies navigate spaces", [
-          A("the basic 3d space navigated by animals and human beings"),
-          A("but also higher-dimensional spaces of things like absrtract tradeoffs", [
-            A("A business navigates the space of possible markets to participate in"),
-            A("what 'sort of messaging should we send'"),
-            A("where should we invest our capital this year?"),
-            A("what kind of employees should we hire?"),
+        D("organisms have bodies, i.e. physical structures with mechanical degrees of freedom"),
+        D("these bodies navigate spaces", [
+          E("the basic 3d space navigated by animals and human beings"),
+          E("but also higher-dimensional spaces of things like absrtract tradeoffs", [
+            E("A business navigates the space of possible markets to participate in"),
+            E("what sort of messaging should we send?"),
+            E("where should we invest our capital this year?"),
+            E("what kind of employees should we hire?"),
            ])
         ]),
         A("organisms sense organs to get information about their environemnt (input)", [
@@ -70,7 +71,7 @@ physics_is_a_value_system = A("Note that physical laws themselves consistute a v
 # say later
 model_values =  A("The fact/value distinction is more useful as a spectrum", [
    A("Values are used to make choices."),
-   A("Values are constraints on possibility space.", [
+   D("Values are constraints on possibility space.", [
        A("Whenever a space of possibilities is constrained to some specific outcome, we can say that some value is in operation."),
        A("It is useful to understand the similarites between all such cases, even those that do not traditionally seem like 'values.'"),
      ]),

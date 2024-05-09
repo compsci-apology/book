@@ -57,3 +57,9 @@ def spaces_per_level(level:int):
 # an Example is another kind of argument
 # we denote these explicitly for a number of reasons
 class Example(Argument): pass
+# a defintion is _also_ an argument
+# this is a clarification of terms, especially useful when tinkering with
+# commonly used words
+class Defintion(Argument): pass
+
+# todo: need _implications_ which combine arguments together
