@@ -1,4 +1,4 @@
-# There are computational reasons to believe there is an optimal way of being 
+# There is an optimal cognitive structure, for evolutionary and computational reasons 
 ## Belief systems are strategies used by organisms 
 ### Software systems and belief systems are both encoded strategies. 
 1. belief systems tell a person (or group thereof) how to act in a given context

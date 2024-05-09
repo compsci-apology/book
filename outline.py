@@ -4,7 +4,7 @@ from strategies import strategies_evolve
 from software import software_evolves_faster
 from hierarchy import hierarchy_improves_evolution
 root = Argument(
-  "There are computational reasons to believe there is an optimal way of being",
+  "There is an optimal cognitive structure, for evolutionary and computational reasons",
   supports = [
     strategies_evolve,
     software_evolves_faster,
