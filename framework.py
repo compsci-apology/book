@@ -15,6 +15,8 @@ patterns of self-deception which arise naturally as a consequence of
 being a materialized, embodied being without total faith in the laws of 
 physics - that such a book would respect the 80 character limit, in case any
 of our venerable ancestors still communicate by means of tty devices.
+
+though maybe i'll go back and do that later :)
 """
 
 # todo: add in concepts like Example, Reference, Implication
@@ -62,4 +64,7 @@ class Example(Argument): pass
 # commonly used words
 class Defintion(Argument): pass
 
+
 # todo: need _implications_ which combine arguments together
+# the supports for an implication don't get enumerated in the outline form
+# but when rendering a graph we can draw these as edges
