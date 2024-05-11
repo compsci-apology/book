@@ -1,6 +1,6 @@
 # A Computer Scientist's Apology
 
-This book is an argument that computer science acts as a bridge from materialism to ancient, widely held "spirtual" truths which have been considered increasingly unfashionable over the last few centuries.
+This book is an argument that computer science acts as a bridge from materialism to ancient, widely held "spiritual" truths, some of which have been considered increasingly unfashionable over the last few centuries.
 
 This book is being writen as an hierarchical network of concepts, using computer code. This is because:
 

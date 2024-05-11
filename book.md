@@ -40,29 +40,61 @@
     2. Changing the wrong way means breaking your strategy's alignment with the current environment
 5. **Not all strategies are equally capable of evolving, for computational reasons.**
 ## Software Evolves Faster Than Hardware 
-### Evolution requires energetic investment 
-1. Changing a house to improve some experience requires labor and materials
-2. Releasing a new product to market requires investment
-3. Developers take time to write, compile and test code
-4. Performing a release takes time and attention
-### An abstraction of a system is a lossy compression of that system 
-1. Abstractions, by considering only some information relevant, constrain the space of possible features that could be considered
-2. Thus, **abstractions are values**.
-### Changing an abstraction is cheaper 
-1. The ENIAC was changed to use a stored program model of execution to reduce cycle cost
-    1. Moving the cables around between programs was expensive and costly
-    2. Changing which program was stored in memory was cheaper
-    3. Fixing the cables in place made the machine slower to operate, but faster to evolve
-2. Changing a blueprint is easier and cheaper than building a prototype
-3. Building a prototype from a blueprint is cheaper than performing the construction
-4. Describing a set of features is easier and cheaper than implementing those features
+### Organisms can use abstraction to evolve faster 
+1. An abstraction is a many-to-one function that maps a larger 'object' domain onto a smaller 'symbol' domain
+    1. When 'abstracting' an object, information about the object is 'thrown out' to produce a symbol
+    2. Abstractions can be chained; symbols themselves can be abstracted further
+    3. Abstractions can be also be incarnated: a symbol can be used to select transformations of the object domain such that the object domain now maps to the symbol
+        1. A blueprint can be used to build a house
+        2. A textual description of a computer program can be turned into source code
+        3. An image or a feeling can be used to guide the creation of a song or painting
+2. A loss function maps symbols to numerical scores.
+3. An organism evolves by computing multiple abstractions of itself, computing the loss function on them, and incarnating the lowest scoring one
+### Evolving an abstraction is cheaper 
+1. Organisms can use abstraction to evolve faster
+    1. An abstraction is a many-to-one function that maps a larger 'object' domain onto a smaller 'symbol' domain
+        1. When 'abstracting' an object, information about the object is 'thrown out' to produce a symbol
+        2. Abstractions can be chained; symbols themselves can be abstracted further
+        3. Abstractions can be also be incarnated: a symbol can be used to select transformations of the object domain such that the object domain now maps to the symbol
+            1. A blueprint can be used to build a house
+            2. A textual description of a computer program can be turned into source code
+            3. An image or a feeling can be used to guide the creation of a song or painting
+    2. A loss function maps symbols to numerical scores.
+    3. An organism evolves by computing multiple abstractions of itself, computing the loss function on them, and incarnating the lowest scoring one
+2. Evolution requires energetic investment
+    1. Changing a house to improve some experience requires labor and materials
+    2. Releasing a new product to market requires investment
+    3. Developers take time to write, compile and test code
+    4. Performing a release takes time and attention
+3. The cost of change is ultimately an energetic cost. Work must be done on a system to change it.
+4. **Changing an abstraction of an object is cheaper than changing the object itself** because less mass needs to move
+    1. The ENIAC was changed to use a stored program model of execution to reduce cycle cost
+        1. Moving the cables around between programs was expensive and costly
+        2. Changing which program was stored in memory was cheaper
+        3. Fixing the cables in place made the machine slower to operate, but faster to evolve
+    2. Changing a blueprint is easier and cheaper than building a prototype
+    3. Building a prototype from a blueprint is cheaper than performing the construction
+    4. Describing a set of features is easier and cheaper than implementing those features
 ### Using abstractions adds a new risk category 
-1. Evolving an abstraction in a way that improves its fitness might not map onto a base-layer change that _also_ improves fitness
+1. The fitness of an organism is determined over long periods of time by the environment itself
+2. The fitness of a symbol is determined by the loss function
+3. The loss function itself is an abstraction of 'the true loss function' of the environment
+    1. A program which fails to compile cannot make the business money
+    2. A program which fails unit tests will likely not reliably make the business money, even if it's faster
+    3. A program which passes all the unit tests, and performs some critical functions faster, in a domain where speed is rewarded, is more likely to make the business money
+4. Modifying a symbol in a way that reduces its computed loss might not incarnate an object whose _actual_ loss is lower.
+    1. Releasing a software change is always risky even if it tests well
+    2. A new marketing campaign might fail even if it did well in focus groups
+    3. A strategy that performed well in simulated combat might not do well in actual battle
+5. Short term performance and even historical performance, are abstractions of expected future performance
+    1. A strategy that has worked well in the past, might have depended on transient environmental conditions
 ### Abstraction functions can _also_ evolve 
 1. Because abstraction has a cost and risk, abstraction functions themselves can evolve
     1. An architect might shift to a new style of blueprints which is faster to make and change
     2. The 'annual spring reorg' at Google
     3. Software engineers might refactor code to produce the same results in a way that's eaiser to change in the future
+    4. Loss functions - because they are abstractions of the true environmental loss function - can evolve too
+        1. A business might develop new key performance indicators that it uses to determine the performance of its strategies
 ## Hierarchically Composed Strategies Are Better Evolving Themselves 
 ### A specific hierarchical structure maximizes the evolvability of conceptual networks 
 1. with the correct hierarchical structure, one component can be changed, or replaced entirely, with a limited 'blast radius'
