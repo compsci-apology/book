@@ -64,13 +64,18 @@ abstractions_add_risk = A("Using abstractions adds a new risk category", [
     E("A new marketing campaign might fail even if it did well in focus groups"),
     E("A strategy that performed well in simulated combat might not do well in actual battle"),
   ]),
-  E("Short term performance and even historical performance, are abstractions of expected future performance", [
+  A("Short term performance and even historical performance, are abstractions of expected future performance", [
     E("A strategy that has worked well in the past, might have depended on transient environmental conditions")
-   ])
-])
+  ])
+ ])
+
+# this is a whole other chapter!
+A("Using an abstraction requires trust in that abstraction", [
+    E("An object which is itself an abstracted symbol, and contains a representation of itself, can contain a representation of the abstractions operating on it")
+  ])
 
 abstraction_mechanisms_can_evolve = A("Abstraction functions can _also_ evolve", [
-  A("Because abstraction has a cost and risk, abstraction functions themselves can evolve", [
+  A("Because using abstraction has a cost and risk, abstraction functions themselves can evolve", [
     E("An architect might shift to a new style of blueprints which is faster to make and change"),
     E("The 'annual spring reorg' at Google"),
     E("Software engineers might refactor code to produce the same results in a way that's eaiser to change in the future"),

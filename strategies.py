@@ -23,12 +23,12 @@ model_robots = A("All organisms and their strategies share traits in common whic
             E("what kind of employees should we hire?"),
            ])
         ]),
-        A("organisms sense organs to get information about their environemnt (input)", [
+        A("sense organs collect information about their environemnt (input)", [
           E("Sense organs like eyes, ears, etc"),
           E("Telescopes, microscopes, cameras"),
           E("Sensor networks, like windmills or social media networks"),
         ]),
-        A("integrated by concept-networks (processing)", [
+        A("input is integrated by concept-networks (processing)", [
           A("This includes human beings looking at information and making decisions")
           ]),
         A("controlling actuators by constraining their degress of freedom  (output)", [

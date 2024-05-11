@@ -13,11 +13,11 @@
             2. what sort of messaging should we send?
             3. where should we invest our capital this year?
             4. what kind of employees should we hire?
-    3. organisms sense organs to get information about their environemnt (input)
+    3. sense organs collect information about their environemnt (input)
         1. Sense organs like eyes, ears, etc
         2. Telescopes, microscopes, cameras
         3. Sensor networks, like windmills or social media networks
-    4. integrated by concept-networks (processing)
+    4. input is integrated by concept-networks (processing)
         1. This includes human beings looking at information and making decisions
     5. controlling actuators by constraining their degress of freedom  (output)
         1. Muscles move bones by contracting, i.e. adding tension that reduces degrees of freedom
@@ -89,7 +89,7 @@
 5. Short term performance and even historical performance, are abstractions of expected future performance
     1. A strategy that has worked well in the past, might have depended on transient environmental conditions
 ### Abstraction functions can _also_ evolve 
-1. Because abstraction has a cost and risk, abstraction functions themselves can evolve
+1. Because using abstraction has a cost and risk, abstraction functions themselves can evolve
     1. An architect might shift to a new style of blueprints which is faster to make and change
     2. The 'annual spring reorg' at Google
     3. Software engineers might refactor code to produce the same results in a way that's eaiser to change in the future
