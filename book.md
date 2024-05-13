@@ -31,6 +31,9 @@
     1. All robots need to solve the problem of reliably obtaining enough energy to keep themselves alive.
     2. They will always be under selective pressure to be more energetically efficient.
     3. This means they must evaluate _tradeoffs_ because energy spent in one area cannot be spent elsewhere
+4. **Meaning is a vector in configuration space**
+    1. an input to an actuator telling it how to operate
+    2. A 'compass' saying which way to go, either in a concerete situation, or in the abstract
 ### Some strategies can themselves evolve 
 1. some organisms - those that live in specific, static niches - do not need to change much over time in order to survive.
 2. other organisms operate in **dynamic niches**  (i.e., niches that change over time), which **requires them to evolve their strategies** in order to survive.
@@ -49,6 +52,18 @@
         2. A textual description of a computer program can be turned into source code
         3. An image or a feeling can be used to guide the creation of a song or painting
 2. A loss function maps symbols to numerical scores.
+    1. A utility function can be see as a kind of loss function; the two are almost, but not quite equiavlent.
+        1. Ignoring hardware constraints, these two are identical
+            1. Maximizing x is mathematically equal to minizing the value of -x
+        2. Given hardware constraints, there is a big difference
+            1. maximizing gain requires more effort as more gains are accomplished
+                1. A utility function has the state of the entire universe as its input
+                2. Some portions can be considered irrelevant, but as utility increases, more needs to be modeled
+                    1. A paperclip maximizer has to keep track of all the paperclips it has produced and where it has produced them and where they have been stored
+                    2. It has to be very careful not to accidentally consume its own input
+            2. minimizing loss is cheaper than maximizing gain because _only_ the loss need be modeled
+                1. A loss function essential presumes some external _truth_ and attempts to measure only deviations from it
+                2. **This is far computationally cheaper than attempting to continuously model the state of the entire universe**
 3. An organism evolves by computing multiple abstractions of itself, computing the loss function on them, and incarnating the lowest scoring one
 ### Evolving an abstraction is cheaper 
 1. Organisms can use abstraction to evolve faster
@@ -60,6 +75,18 @@
             2. A textual description of a computer program can be turned into source code
             3. An image or a feeling can be used to guide the creation of a song or painting
     2. A loss function maps symbols to numerical scores.
+        1. A utility function can be see as a kind of loss function; the two are almost, but not quite equiavlent.
+            1. Ignoring hardware constraints, these two are identical
+                1. Maximizing x is mathematically equal to minizing the value of -x
+            2. Given hardware constraints, there is a big difference
+                1. maximizing gain requires more effort as more gains are accomplished
+                    1. A utility function has the state of the entire universe as its input
+                    2. Some portions can be considered irrelevant, but as utility increases, more needs to be modeled
+                        1. A paperclip maximizer has to keep track of all the paperclips it has produced and where it has produced them and where they have been stored
+                        2. It has to be very careful not to accidentally consume its own input
+                2. minimizing loss is cheaper than maximizing gain because _only_ the loss need be modeled
+                    1. A loss function essential presumes some external _truth_ and attempts to measure only deviations from it
+                    2. **This is far computationally cheaper than attempting to continuously model the state of the entire universe**
     3. An organism evolves by computing multiple abstractions of itself, computing the loss function on them, and incarnating the lowest scoring one
 2. Evolution requires energetic investment
     1. Changing a house to improve some experience requires labor and materials
@@ -75,19 +102,6 @@
     2. Changing a blueprint is easier and cheaper than building a prototype
     3. Building a prototype from a blueprint is cheaper than performing the construction
     4. Describing a set of features is easier and cheaper than implementing those features
-### Using abstractions adds a new risk category 
-1. The fitness of an organism is determined over long periods of time by the environment itself
-2. The fitness of a symbol is determined by the loss function
-3. The loss function itself is an abstraction of 'the true loss function' of the environment
-    1. A program which fails to compile cannot make the business money
-    2. A program which fails unit tests will likely not reliably make the business money, even if it's faster
-    3. A program which passes all the unit tests, and performs some critical functions faster, in a domain where speed is rewarded, is more likely to make the business money
-4. Modifying a symbol in a way that reduces its computed loss might not incarnate an object whose _actual_ loss is lower.
-    1. Releasing a software change is always risky even if it tests well
-    2. A new marketing campaign might fail even if it did well in focus groups
-    3. A strategy that performed well in simulated combat might not do well in actual battle
-5. Short term performance and even historical performance, are abstractions of expected future performance
-    1. A strategy that has worked well in the past, might have depended on transient environmental conditions
 ### Abstraction functions can _also_ evolve 
 1. Because using abstraction has a cost and risk, abstraction functions themselves can evolve
     1. An architect might shift to a new style of blueprints which is faster to make and change
@@ -95,10 +109,24 @@
     3. Software engineers might refactor code to produce the same results in a way that's eaiser to change in the future
     4. Loss functions - because they are abstractions of the true environmental loss function - can evolve too
         1. A business might develop new key performance indicators that it uses to determine the performance of its strategies
+### Using abstractions adds a new risk category 
+1. The fitness of an organism is determined over long periods of time by the environment itself
+2. The fitness of a symbol is determined by the loss function
+3. The loss function itself is an approximation of 'the true loss function' of the environment
+    1. A program which fails to compile cannot make the business money
+    2. A program which fails unit tests will likely not reliably make the business money, even if it's faster
+    3. A program which passes all the unit tests, and performs some critical functions faster, in a domain where speed is rewarded, is more likely to make the business money
+4. Modifying a symbol in a way that reduces its computed loss might not incarnate an object whose _actual_ loss is lower.
+    1. The loss function only an _approximation_ of the true loss function
+    2. Releasing a software change is always risky even if it tests well
+    3. A new marketing campaign might fail even if it did well in focus groups
+    4. A strategy that performed well in simulated combat might not do well in actual battle
+5. Short term performance and even historical performance, are abstractions of expected future performance
+    1. A strategy that has worked well in the past, might have depended on transient environmental conditions
 ## Hierarchically Composed Strategies Are Better Evolving Themselves 
 ### A specific hierarchical structure maximizes the evolvability of conceptual networks 
 1. with the correct hierarchical structure, one component can be changed, or replaced entirely, with a limited 'blast radius'
-    1. A 'parent' concept can remain identical, while the 'child' concept is repalced entirely
+    1. A 'parent' abstraction can remain identical, while the 'child' abstraction is repalced entirely
     2. This can work safely if the parent-child relationship is context-specific
         1. i.e. the child concept has meaning (i.e. possibly contributes to motion of the body) only in a particular context
     3. This hierarchical configuration also **requires increasing abstraction at higher levels**
@@ -109,21 +137,24 @@
         5. A confirmation diaglog box expects a certain kind of application state to modify
 2. Absent the correct hierarchical structure, making discrete changes becomes impossible in large systems
     1. If a change anywhere in a concept network could effect behavior in any context, the risk of changes reducing fitness goes up
+        1.  the loss function loses its approximative capacity
     2. One conseuqence of this is that **large systems with incorrectly defined hierarchies become incapable of change**
     3. The only way a large hierachy can continually evolve is if the top layers are extremely lightweight and flexible
         1. The layers at the top need to be almost _unopinionated_ about what happens at the bottom
-        2. instead they should focus primarily on conflict resolution between intermediary layers
+        2. instead they should focus primarily on **conflict resolution between intermediary layers**
         3. Otherwise, changes at the top will break the bottom in many ways, some of which are hard to recognize
 3. Organisms that operate in multiple, distinct, changing environments will be selected for this hierarchical structure
     1. This conceptual structure allows for faster learning inindividual environments, thus faster adaptation to change
     2. This conceptual structure allows for generalization across environments, lowering the energy cost of learning
-### Memories, beliefs, and abstract concepts exist in a hierarchy of abstraction roughly matching that which maxizes evolvability. 
+### Memories, beliefs, and abstract concepts exist in a hierarchy of abstraction 
 1. Each layer is a lossy compression of the layer below it
-    1. Our senses give us only meaningless impressions
-    2. Experiences are compressions of groups of impressions
-    3. Memories are compressiosn of groups of experiences
-    4. Beliefs are compressions of groups of memories
-    5. Concepts are compressions of groups of beliefs
+    1. Our senses give us only meaningless impressions of the environment - they are abstraction functions computed on the environment
+    2. Experiences are abstractions of groups of impressions
+    3. Memories are abstractions of groups of experiences
+    4. Beliefs are abstractions of groups of memories
+    5. Concepts are abstractions of groups of beliefs
+    6. Principles are abstractions of groups of concepts
+    7. A monothesitic cognitive structure is one with a single root abstraction
 ## Abstract beliefs as organizing principles are necessary for group survival. 
 ## Trust in the organizing principle of the group is necessary for group cohesion 
 ## The evolutionary limit of "trust in the organizing principle" is trusting reality itself. 

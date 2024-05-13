@@ -23,7 +23,26 @@ abstractions_are_one_way_functions = D("An abstraction is a many-to-one function
       #  D("Thus, **abstractions are values**."), - this doesn't need to go here yet, but it needs to be said at some point
     ])
 
-loss_functions_are_scores = D("A loss function maps symbols to numerical scores.")
+loss_functions_are_scores = D("A loss function maps symbols to numerical scores.", [
+  D("A utility function can be see as a kind of loss function; the two are almost, but not quite equiavlent.", [
+    A("Ignoring hardware constraints, these two are identical",[
+      A("Maximizing x is mathematically equal to minizing the value of -x"), 
+    ]),
+    A("Given hardware constraints, there is a big difference", [
+      A("maximizing gain requires more effort as more gains are accomplished", [
+        A("A utility function has the state of the entire universe as its input"),
+        A("Some portions can be considered irrelevant, but as utility increases, more needs to be modeled", [
+        E("A paperclip maximizer has to keep track of all the paperclips it has produced and where it has produced them and where they have been stored"),
+        E("It has to be very careful not to accidentally consume its own input")
+       ]),
+      ]),
+      A("minimizing loss is cheaper than maximizing gain because _only_ the loss need be modeled", [
+        A("A loss function essential presumes some external _truth_ and attempts to measure only deviations from it"),
+        A("**This is far computationally cheaper than attempting to continuously model the state of the entire universe**"),
+      ]),
+    ])
+  ])
+ ])
 
 abstractions_evolve = D("Organisms can use abstraction to evolve faster", [
   abstractions_are_one_way_functions,
@@ -54,12 +73,13 @@ abstractions_are_cheaper = A("Evolving an abstraction is cheaper", [
 abstractions_add_risk = A("Using abstractions adds a new risk category", [
   A("The fitness of an organism is determined over long periods of time by the environment itself"),
   A("The fitness of a symbol is determined by the loss function"),
-  A("The loss function itself is an abstraction of 'the true loss function' of the environment", [
+  A("The loss function itself is an approximation of 'the true loss function' of the environment", [
     E("A program which fails to compile cannot make the business money"),
     E("A program which fails unit tests will likely not reliably make the business money, even if it's faster"),
     E("A program which passes all the unit tests, and performs some critical functions faster, in a domain where speed is rewarded, is more likely to make the business money"),
   ]),
   A("Modifying a symbol in a way that reduces its computed loss might not incarnate an object whose _actual_ loss is lower.", [
+    E("The loss function only an _approximation_ of the true loss function"),
     E("Releasing a software change is always risky even if it tests well"),
     E("A new marketing campaign might fail even if it did well in focus groups"),
     E("A strategy that performed well in simulated combat might not do well in actual battle"),
@@ -92,8 +112,8 @@ software_evolves_faster = A(
   root,  [
     abstractions_evolve,
     abstractions_are_cheaper,
+    abstraction_mechanisms_can_evolve,
     abstractions_add_risk,
-    abstraction_mechanisms_can_evolve
   ]
 )
 

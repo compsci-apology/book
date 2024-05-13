@@ -37,6 +37,7 @@ model_robots = A("All organisms and their strategies share traits in common whic
           A("A engineering department specifies which priorties they will invest in this quarter"),
         ]),
       ]),
+      
       A("This model will allow us to understand the **common computational problems that all of these organisms must solve**", [
         A("they must model their enviornment and their relationship to it"), 
         A("they must navigate away from threats"),
@@ -47,6 +48,10 @@ model_robots = A("All organisms and their strategies share traits in common whic
         A("They will always be under selective pressure to be more energetically efficient."),
         A("This means they must evaluate _tradeoffs_ because energy spent in one area cannot be spent elsewhere"),
        ]),
+    D("**Meaning is a vector in configuration space**", [
+        E("an input to an actuator telling it how to operate"),
+        E("A 'compass' saying which way to go, either in a concerete situation, or in the abstract")
+      ]),
     ])
 
 

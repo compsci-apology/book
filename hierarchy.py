@@ -3,9 +3,31 @@ from framework import Example as E
 
 root = "Hierarchically Composed Strategies Are Better Evolving Themselves"
 
+
+human_cognitive_structure_is_hierarchical =  A("Memories, beliefs, and abstract concepts exist in a hierarchy of abstraction", [
+  A("Each layer is a lossy compression of the layer below it", [
+    A("Our senses give us only meaningless impressions of the environment - they are abstraction functions computed on the environment"),
+    A("Experiences are abstractions of groups of impressions"), # todo: add reference to hindu mythology on bodies being accumulations of sense impressions
+    A("Memories are abstractions of groups of experiences"),
+    A("Beliefs are abstractions of groups of memories"),
+    A("Concepts are abstractions of groups of beliefs"),
+    A("Principles are abstractions of groups of concepts"),
+    A("A monothesitic cognitive structure is one with a single root abstraction"),
+  ])
+])
+
+
+generalization_pulls_represntations_up =  A("Discrete experiences accumulate meaning at lower layers of this higherarchy")
+
+
+repeated_abstraction_generates_hierarches = A("Applying an abstraction to an abstraction produces a hierarchy of abstractions.",
+ [
+    human_cognitive_structure_is_hierarchical,
+])
+
 hierarchy_enables_discrete_change = A("A specific hierarchical structure maximizes the evolvability of conceptual networks", [
   A("with the correct hierarchical structure, one component can be changed, or replaced entirely, with a limited 'blast radius'", [
-    A("A 'parent' concept can remain identical, while the 'child' concept is repalced entirely"),
+    A("A 'parent' abstraction can remain identical, while the 'child' abstraction is repalced entirely"),
     A("This can work safely if the parent-child relationship is context-specific", [
       A("i.e. the child concept has meaning (i.e. possibly contributes to motion of the body) only in a particular context"),
     ]),
@@ -18,11 +40,13 @@ hierarchy_enables_discrete_change = A("A specific hierarchical structure maximiz
     ]),
   ]),
   A("Absent the correct hierarchical structure, making discrete changes becomes impossible in large systems", [
-    A("If a change anywhere in a concept network could effect behavior in any context, the risk of changes reducing fitness goes up"),
+    A("If a change anywhere in a concept network could effect behavior in any context, the risk of changes reducing fitness goes up", [
+    A(" the loss function loses its approximative capacity"),
+    ]),
     A("One conseuqence of this is that **large systems with incorrectly defined hierarchies become incapable of change**"),
     A("The only way a large hierachy can continually evolve is if the top layers are extremely lightweight and flexible", [
       A("The layers at the top need to be almost _unopinionated_ about what happens at the bottom"),
-      A("instead they should focus primarily on conflict resolution between intermediary layers"),
+      A("instead they should focus primarily on **conflict resolution between intermediary layers**"),
       A("Otherwise, changes at the top will break the bottom in many ways, some of which are hard to recognize")
      ]),
    ]),
@@ -32,16 +56,6 @@ hierarchy_enables_discrete_change = A("A specific hierarchical structure maximiz
   ]),
 ])
 
-
-human_cognitive_structure_is_hierarchical =  A("Memories, beliefs, and abstract concepts exist in a hierarchy of abstraction roughly matching that which maxizes evolvability.", [
-  A("Each layer is a lossy compression of the layer below it", [
-    A("Our senses give us only meaningless impressions"),
-    A("Experiences are compressions of groups of impressions"), # todo: add reference to hindu mythology on bodies being accumulations of sense impressions
-    A("Memories are compressiosn of groups of experiences"),
-    A("Beliefs are compressions of groups of memories"),
-    A("Concepts are compressions of groups of beliefs"),
-  ])
-])
 
 abstract_concepts_are_values = (
   )
