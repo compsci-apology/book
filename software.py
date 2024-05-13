@@ -13,9 +13,13 @@ evolution_requires_energy = A("Evolution requires energetic investment", [
 ])
 
 abstractions_are_one_way_functions = D("An abstraction is a many-to-one function that maps a larger 'object' domain onto a smaller 'symbol' domain", 
-    [ D("When 'abstracting' an object, information about the object is 'thrown out' to produce a symbol"),
+    [ D("When 'abstracting' an object, information about the object is 'thrown out' to produce a symbol", [
+      D("Individual objects as well as groups of objects and their relationships can be abstracted"),
+      E("The geometry walls of a room can be abstracted as a set of linear shapes, with only lengths and angles"),
+      ]),
       D("Abstractions can be chained; symbols themselves can be abstracted further"),
-      D("Abstractions can be also be incarnated: a symbol can be used to select transformations of the object domain such that the object domain now maps to the symbol", [
+      D("Abstractions can be also be incarnated", [
+        D("a symbol can be used to select transformations of the object domain such that the object domain now maps to the symbol"), 
         E("A blueprint can be used to build a house"),
         E("A textual description of a computer program can be turned into source code"),
         E("An image or a feeling can be used to guide the creation of a song or painting"),
@@ -37,7 +41,7 @@ loss_functions_are_scores = D("A loss function maps symbols to numerical scores.
        ]),
       ]),
       A("minimizing loss is cheaper than maximizing gain because _only_ the loss need be modeled", [
-        A("A loss function essential presumes some external _truth_ and attempts to measure only deviations from it"),
+        A("An abstracted loss function essentially presumes some external _truth_ and attempts to measure only deviations from it"),
         A("**This is far computationally cheaper than attempting to continuously model the state of the entire universe**"),
       ]),
     ])
@@ -47,14 +51,19 @@ loss_functions_are_scores = D("A loss function maps symbols to numerical scores.
 abstractions_evolve = D("Organisms can use abstraction to evolve faster", [
   abstractions_are_one_way_functions,
   loss_functions_are_scores,
-  D("An organism evolves by computing multiple abstractions of itself, computing the loss function on them, and incarnating the lowest scoring one")
+  D("An organism evolves using abstraction", [
+   D("by computing abstractions of itself", [
+     E("i.e. imagining ways it could be, or could act, or could move, or could communicate")
+    ]),
+   D("computing the loss function on these abstractions"),
+   D("and acting to incarnate the lowest scoring abstraction")
+  ]),
 ])
 
 # an abstraction is a many-to-one-function that maps a larger 'object' domain onto a smaller 'symbol' domain
 # the abstraction function
 
 abstractions_are_cheaper = A("Evolving an abstraction is cheaper", [
-  abstractions_evolve,
   evolution_requires_energy,
   A("The cost of change is ultimately an energetic cost. Work must be done on a system to change it."),
   A("**Changing an abstraction of an object is cheaper than changing the object itself** because less mass needs to move", [
@@ -68,7 +77,8 @@ abstractions_are_cheaper = A("Evolving an abstraction is cheaper", [
      E("Describing a set of features is easier and cheaper than implementing those features"),
 
     ]),
-  ])
+  abstractions_evolve,
+ ])
 
 abstractions_add_risk = A("Using abstractions adds a new risk category", [
   A("The fitness of an organism is determined over long periods of time by the environment itself"),
@@ -77,6 +87,7 @@ abstractions_add_risk = A("Using abstractions adds a new risk category", [
     E("A program which fails to compile cannot make the business money"),
     E("A program which fails unit tests will likely not reliably make the business money, even if it's faster"),
     E("A program which passes all the unit tests, and performs some critical functions faster, in a domain where speed is rewarded, is more likely to make the business money"),
+    E("A program which runs faster might not matter at all to the business and its development could thus represent waste"),
   ]),
   A("Modifying a symbol in a way that reduces its computed loss might not incarnate an object whose _actual_ loss is lower.", [
     E("The loss function only an _approximation_ of the true loss function"),
@@ -84,7 +95,7 @@ abstractions_add_risk = A("Using abstractions adds a new risk category", [
     E("A new marketing campaign might fail even if it did well in focus groups"),
     E("A strategy that performed well in simulated combat might not do well in actual battle"),
   ]),
-  A("Short term performance and even historical performance, are abstractions of expected future performance", [
+  A("Short term performance and even historical performance, are merely inputs to expected future performance", [
     E("A strategy that has worked well in the past, might have depended on transient environmental conditions")
   ])
  ])
@@ -110,7 +121,6 @@ abstraction_mechanisms_can_evolve = A("Abstraction functions can _also_ evolve",
 
 software_evolves_faster = A(
   root,  [
-    abstractions_evolve,
     abstractions_are_cheaper,
     abstraction_mechanisms_can_evolve,
     abstractions_add_risk,

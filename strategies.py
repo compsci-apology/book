@@ -1,6 +1,7 @@
 from framework import Argument as A
 from framework import Defintion as D
 from framework import Example as E
+from framework import Reference as R
 
 
 root = "Belief systems are strategies used by organisms"
@@ -33,7 +34,7 @@ model_robots = A("All organisms and their strategies share traits in common whic
           ]),
         A("controlling actuators by constraining their degress of freedom  (output)", [
           A("Muscles move bones by contracting, i.e. adding tension that reduces degrees of freedom"),
-          A("A thermostat species whether the furance or a/c system should be on or off"),
+          A("A thermostat specifies whether the furance or a/c system should be on or off"),
           A("A engineering department specifies which priorties they will invest in this quarter"),
         ]),
       ]),
@@ -50,7 +51,7 @@ model_robots = A("All organisms and their strategies share traits in common whic
        ]),
     D("**Meaning is a vector in configuration space**", [
         E("an input to an actuator telling it how to operate"),
-        E("A 'compass' saying which way to go, either in a concerete situation, or in the abstract")
+        E("A 'compass' saying which way to go, either in a concerete situation, or in the space of an abstraction")
       ]),
     ])
 
@@ -92,14 +93,30 @@ model_values =  A("The fact/value distinction is more useful as a spectrum", [
 ])
 
 strategies_evolve = A("Some strategies can themselves evolve", [
-    A("some organisms - those that live in specific, static niches - do not need to change much over time in order to survive."),
-    A("other organisms operate in **dynamic niches**  (i.e., niches that change over time), which **requires them to evolve their strategies** in order to survive."),
+    A("some organisms - those that live in specific, static niches - do not need to change much over time in order to survive.", [
+      E("This includes most animals"), # is this actually true or would it be better to describe niches in terms of how frequently they change?
+      E("This includes human beings pre sedentary shift, in periods of long-term static culture")
+     ]),
+    A("other organisms operate in **dynamic niches**  (i.e., niches that change over time), which **requires them to evolve their strategies** in order to survive.", [
+      E("businesses in competitive industries"),
+      E("human beings in dynamic situations"),
+      E("political structures in times of change"),
+    ]),
     A("Evolving a belief system means changing beliefs, i.e. learning and unlearning concepts."),
     A("It is difficult to get these changes right.", [
       A("Failing to change means death because the environment changes in ways that break your strategy"),
       A("Changing the wrong way means breaking your strategy's alignment with the current environment"),
     ]),
-    A("**Not all strategies are equally capable of evolving, for computational reasons.**")
+    A("**Not all strategies are equally capable of evolving, for computational reasons.**", [
+      A("Efficiency and resilience trade off against each other"),
+      A("Resilience is a pre-requisite for evolveability"),
+      A("Organisms in dynamic niches use specific strategies to increase evolvability", [ 
+        # need to talk here about the distintion between organisms and life
+        # i.e. tlak about life 'holisticaly' rather than as merely a collection of organisms
+        # i.e. istead of seeing the organisms as what's real and life as a collection of them
+        # we can also view 'life' as being more real, and specific organisms as being, the means by which life explores speific niches
+      ]),
+    ])
   ])
 
 

@@ -37,17 +37,18 @@ class Argument:
 
     # humans generally count from 1 for some reason
     header_num = header_num +1
+    root_spaces = spaces_per_level(level)
+    support_spaces = spaces_per_level(level+1)
+
     if level < HEADER_LEVELS:
       header = '#'*(level+1) + f' {self.thesis} '
     else:
-      root_spaces = spaces_per_level(level)
-      support_spaces = spaces_per_level(level+1)
       header = f'{root_spaces}{header_num}. {self.thesis}'
 
     supports = [
-      s.to_markdown_list(level+1, header_num=i) if isinstance(s, Argument) else\
+          s.to_markdown_list(level+1, header_num=i) if isinstance(s, Argument) else\
           f'{support_spaces}{i}. {s}' for i, s in enumerate(self.supports)
-    ]
+       ]
     return '\n'.join([header] + supports)
 
 def spaces_per_level(level:int):
@@ -63,6 +64,8 @@ class Example(Argument): pass
 # this is a clarification of terms, especially useful when tinkering with
 # commonly used words
 class Defintion(Argument): pass
+
+class Reference(Argument): pass
 
 
 # todo: need _implications_ which combine arguments together
