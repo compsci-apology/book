@@ -12,20 +12,25 @@ evolution_requires_energy = A("Evolution requires energetic investment", [
   E("Performing a release takes time and attention"),
 ])
 
-abstractions_are_one_way_functions = D("An abstraction is a many-to-one function that maps a larger 'object' domain onto a smaller 'symbol' domain", 
+abstractions_are_many_to_one_functions = D("An abstraction is a many-to-one function that maps a larger 'object' domain onto a smaller 'symbol' domain", 
     [ D("When 'abstracting' an object, information about the object is 'thrown out' to produce a symbol", [
       D("Individual objects as well as groups of objects and their relationships can be abstracted"),
       E("The geometry walls of a room can be abstracted as a set of linear shapes, with only lengths and angles"),
       ]),
       D("Abstractions can be chained; symbols themselves can be abstracted further"),
       D("Abstractions can be also be incarnated", [
-        D("a symbol can be used to select transformations of the object domain such that the object domain now maps to the symbol"), 
-        E("A blueprint can be used to build a house"),
-        E("A textual description of a computer program can be turned into source code"),
-        E("An image or a feeling can be used to guide the creation of a song or painting"),
-       ]),
-      #  D("Thus, **abstractions are values**."), - this doesn't need to go here yet, but it needs to be said at some point
-    ])
+        D("a symbol can be used to select transformations of the object domain such that the object domain now maps to the symbol", [ 
+          E("A blueprint can be used to build a house"),
+          E("A textual description of a computer program can be turned into source code"),
+          E("An image or a feeling can be used to guide the creation of a song or painting"),
+        ])
+      ])
+   ])
+
+acutators_can_be_abstracted = E("Absractions can also be applied to motions", [
+          D("Rather than causing a muscle to contract directly, an abstraction can represent contractions of muscle groups"),
+       ])
+
 
 loss_functions_are_scores = D("A loss function maps symbols to numerical scores.", [
   D("A utility function can be see as a kind of loss function; the two are almost, but not quite equiavlent.", [
@@ -49,7 +54,8 @@ loss_functions_are_scores = D("A loss function maps symbols to numerical scores.
  ])
 
 abstractions_evolve = D("Organisms can use abstraction to evolve faster", [
-  abstractions_are_one_way_functions,
+  abstractions_are_many_to_one_functions,
+  acutators_can_be_abstracted,
   loss_functions_are_scores,
   D("An organism evolves using abstraction", [
    D("by computing abstractions of itself", [

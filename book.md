@@ -4,7 +4,11 @@
 1. belief systems tell a person (or group thereof) how to act in a given context
 2. software systems tell a microprocessor how to act in a given context.
 ### All organisms and their strategies share traits in common which can be understood with an abstract model. 
-1. We can consider all of these as being robots, with 'bodies' controlled by software.
+1. Individual human beings, businesses, and governments all have to solve similar computational problems
+    1. they must model their enviornment and their relationship to it
+    2. they must navigate away from threats
+    3. the must navigate towards opportunities.
+2. We can consider all of these as being robots, with 'bodies' controlled by software.
     1. organisms have bodies, i.e. physical structures with mechanical degrees of freedom
     2. these bodies navigate spaces
         1. the basic 3d space navigated by animals and human beings
@@ -23,17 +27,11 @@
         1. Muscles move bones by contracting, i.e. adding tension that reduces degrees of freedom
         2. A thermostat specifies whether the furance or a/c system should be on or off
         3. A engineering department specifies which priorties they will invest in this quarter
-2. This model will allow us to understand the **common computational problems that all of these organisms must solve**
-    1. they must model their enviornment and their relationship to it
-    2. they must navigate away from threats
-    3. the must navigate towards opportunities.
-3. Another advantage of this generic model is that we can remember that these robots always exist in the physical universe.
+3. This model will allow us to understand the **common computational problems that all of these organisms must solve**
+4. Another advantage of this generic model is that we can remember that these robots always exist in the physical universe.
     1. All robots need to solve the problem of reliably obtaining enough energy to keep themselves alive.
     2. They will always be under selective pressure to be more energetically efficient.
     3. This means they must evaluate _tradeoffs_ because energy spent in one area cannot be spent elsewhere
-4. **Meaning is a vector in configuration space**
-    1. an input to an actuator telling it how to operate
-    2. A 'compass' saying which way to go, either in a concerete situation, or in the space of an abstraction
 ### Some strategies can themselves evolve 
 1. some organisms - those that live in specific, static niches - do not need to change much over time in order to survive.
     1. This includes most animals
@@ -74,10 +72,12 @@
         2. Abstractions can be chained; symbols themselves can be abstracted further
         3. Abstractions can be also be incarnated
             1. a symbol can be used to select transformations of the object domain such that the object domain now maps to the symbol
-            2. A blueprint can be used to build a house
-            3. A textual description of a computer program can be turned into source code
-            4. An image or a feeling can be used to guide the creation of a song or painting
-    2. A loss function maps symbols to numerical scores.
+                1. A blueprint can be used to build a house
+                2. A textual description of a computer program can be turned into source code
+                3. An image or a feeling can be used to guide the creation of a song or painting
+    2. Absractions can also be applied to motions
+        1. Rather than causing a muscle to contract directly, an abstraction can represent contractions of muscle groups
+    3. A loss function maps symbols to numerical scores.
         1. A utility function can be see as a kind of loss function; the two are almost, but not quite equiavlent.
             1. Ignoring hardware constraints, these two are identical
                 1. Maximizing x is mathematically equal to minizing the value of -x
@@ -90,7 +90,7 @@
                 2. minimizing loss is cheaper than maximizing gain because _only_ the loss need be modeled
                     1. An abstracted loss function essentially presumes some external _truth_ and attempts to measure only deviations from it
                     2. **This is far computationally cheaper than attempting to continuously model the state of the entire universe**
-    3. An organism evolves using abstraction
+    4. An organism evolves using abstraction
         1. by computing abstractions of itself
             1. i.e. imagining ways it could be, or could act, or could move, or could communicate
         2. computing the loss function on these abstractions

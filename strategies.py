@@ -13,6 +13,11 @@ beliefs_are_strategies = A("Software systems and belief systems are both encoded
     ])
 
 model_robots = A("All organisms and their strategies share traits in common which can be understood with an abstract model.",  [
+      A("Individual human beings, businesses, and governments all have to solve similar computational problems", [
+        A("they must model their enviornment and their relationship to it"), 
+        A("they must navigate away from threats"),
+        A("the must navigate towards opportunities."),
+      ]),
       A("We can consider all of these as being robots, with 'bodies' controlled by software.", [
         D("organisms have bodies, i.e. physical structures with mechanical degrees of freedom"),
         D("these bodies navigate spaces", [
@@ -36,23 +41,19 @@ model_robots = A("All organisms and their strategies share traits in common whic
           A("Muscles move bones by contracting, i.e. adding tension that reduces degrees of freedom"),
           A("A thermostat specifies whether the furance or a/c system should be on or off"),
           A("A engineering department specifies which priorties they will invest in this quarter"),
+         # D("**Meaning is a vector in configuration space**", [ # i don't think we are ready for this yet
+         #   E("an input to an actuator telling it how to operate"),
+         #   E("A 'compass' saying which way to go, either in a concerete situation, or in the space of an abstraction")
+         # ]),
         ]),
       ]),
       
-      A("This model will allow us to understand the **common computational problems that all of these organisms must solve**", [
-        A("they must model their enviornment and their relationship to it"), 
-        A("they must navigate away from threats"),
-        A("the must navigate towards opportunities."),
-      ]),
+      A("This model will allow us to understand the **common computational problems that all of these organisms must solve**"),
       A("Another advantage of this generic model is that we can remember that these robots always exist in the physical universe.", [ 
         A("All robots need to solve the problem of reliably obtaining enough energy to keep themselves alive."),
         A("They will always be under selective pressure to be more energetically efficient."),
         A("This means they must evaluate _tradeoffs_ because energy spent in one area cannot be spent elsewhere"),
        ]),
-    D("**Meaning is a vector in configuration space**", [
-        E("an input to an actuator telling it how to operate"),
-        E("A 'compass' saying which way to go, either in a concerete situation, or in the space of an abstraction")
-      ]),
     ])
 
 
