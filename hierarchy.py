@@ -64,8 +64,8 @@ root_concept = A("The limit of this process could be a single, general purpose, 
 ])
 
 repeated_abstraction_generates_hierarches = A("Learning patterns of reality produces a hierarchy of abstractions", [
-  abstractions_are_cheaper,
   concepts_evolve,
+  abstractions_are_cheaper,
   root_concept
 ])
 

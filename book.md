@@ -1,14 +1,33 @@
 # There is an optimal cognitive structure, for evolutionary and computational reasons 
 ## Belief systems are strategies used by organisms 
 ### Software systems and belief systems are both encoded strategies. 
-1. belief systems tell a person (or group thereof) how to act in a given context
-2. software systems tell a microprocessor how to act in a given context.
+1. A strategy is a **bidrectional flow of information** between an agent and its environnment
+    1. Strategies are often expressed as if 'the state of the world' were known. This is an oversimplification.
+        1. In games of perfect information, which are turned based without timers, this approximation works. Computation can be ignored.
+        2. Living oragnisms do not have perfect information about their environment, and must react and reason within latency bounds. Thus they must use **computational strategies**
+        3. Organisms must choose, not only how to act, but **how to think and what to pay attention to**. They must compute.
+            1. Thus, computational theory has implications for which strategies are viable in which contexts
+                1. Why Philosophers Should Care About Computational Complexity Theory, by Scott Aaronson
+2. Any flow of information which matches this shape could therefore be considered an agent executing a strategy
+    1. But this is all computational processes!
+    2. The agent/not-agent distinction might be more of a spectrum than a binary
+    3. We argue that **any computational process** is somewhat agentic
+    4. The agency of a computational process depends on its computational structure
+        1. Computational resources constrain agency.
+            1. Time in which to compute
+            2. Space to use as working memory
+            3. Randomness is a computational resource, access to randomness constrains some algorithms
+        2. Access to energy constrains agency
+        3. Access to information constrains agency
 ### All organisms and their strategies share traits in common which can be understood with an abstract model. 
 1. Individual human beings, businesses, and governments all have to solve similar computational problems
     1. they must model their enviornment and their relationship to it
     2. they must navigate away from threats
     3. the must navigate towards opportunities.
-2. We can consider all of these as being robots, with 'bodies' controlled by software.
+2. Game theoriticians talk about convergent instrumental subgoals; there appear to be **convergent instrumental implementation details**
+    1. This thesis argues that **there are numerous convergent instrumental implentation details for sufficiently advanced strategies**
+    2. And that **these implementation details** line up with strategies articulated in numerous wisdom traditions
+3. We can consider all agents as being robots, with 'bodies' controlled by software strategies.
     1. organisms have bodies, i.e. physical structures with mechanical degrees of freedom
     2. these bodies navigate spaces
         1. the basic 3d space navigated by animals and human beings
@@ -17,18 +36,27 @@
             2. what sort of messaging should we send?
             3. where should we invest our capital this year?
             4. what kind of employees should we hire?
-    3. sense organs collect information about their environemnt (input)
-        1. Sense organs like eyes, ears, etc
-        2. Telescopes, microscopes, cameras
-        3. Sensor networks, like windmills or social media networks
-    4. input is integrated by concept-networks (processing)
-        1. This includes human beings looking at information and making decisions
-    5. controlling actuators by constraining their degress of freedom  (output)
-        1. Muscles move bones by contracting, i.e. adding tension that reduces degrees of freedom
-        2. A thermostat specifies whether the furance or a/c system should be on or off
-        3. A engineering department specifies which priorties they will invest in this quarter
-3. This model will allow us to understand the **common computational problems that all of these organisms must solve**
-4. Another advantage of this generic model is that we can remember that these robots always exist in the physical universe.
+    3. using **computational models of meaning**
+        1. A model of meaning is agorithm for computing a heading in a context
+            1. i.e., a desired navigation vector in an abstract space
+            2. The OODA Loop describes a computational processes
+                1. John Boyd, 'The Essence of Winning and Losing'
+                2. Observe: input (gather sense data from the environment)
+                3. Orient: map sense data to a conceptual model of possible actions
+                4. Decide: reduce the map of possible actions to one best action
+                5. Act: output (perform the best action)
+            3. sense organs collect information about their environment (input)
+                1. Sense organs like eyes, ears, etc
+                2. Telescopes, microscopes, cameras
+                3. Sensor networks, like windmills or social media networks
+            4. input is integrated by concept-networks (processing)
+                1. This includes human beings looking at information and making decisions
+            5. controlling actuators by constraining their degress of freedom  (output)
+                1. Muscles move bones by contracting, i.e. adding tension that reduces degrees of freedom
+                2. A thermostat specifies whether the furance or a/c system should be on or off
+                3. A engineering department specifies which priorties they will invest in this quarter
+4. This model will allow us to understand the **common computational problems that all of these organisms must solve**
+5. Another advantage of this generic model is that we can remember that these robots always exist in the physical universe.
     1. All robots need to solve the problem of reliably obtaining enough energy to keep themselves alive.
     2. They will always be under selective pressure to be more energetically efficient.
     3. This means they must evaluate _tradeoffs_ because energy spent in one area cannot be spent elsewhere
@@ -153,13 +181,7 @@
     6. Principles are abstractions of groups of beliefs
     7. A cognitive structure with a single 'root' principle contains a single root abstraction
 ### Learning patterns of reality produces a hierarchy of abstractions 
-1. Pulling concepts up lowers their computational cost and increases their flexilibity
-    1. Once an abstract concept has been learned, it can be applied in nother novel situations 'for free'
-        1. There is only the risk of mis-appling the concept
-        2. The potential benefit is that learning in one situation or context can enable application of that same learning elsewhere
-        3. Higher layers of the abstraction model are cheaper and easier to compute
-            1. Measuring the area of a wall is much easier to do accurately than simulatinng putting pain on it
-2. Concepts themselves can evolve
+1. Concepts themselves can evolve
     1. Recongizing similaries at one level of abstraction motivates higher levels of abstraction
         1. A single experience of some new phenomena is contextualy localized
         2. Repeated experience of the same phenomena leads to multiple memories with similar properties
@@ -170,6 +192,12 @@
     3. An abstract concept can be unlearned as well
         1. Falling to apply an abstract concept multiple times might lead to its breakdown
             1. Believing that some process works in all cases, and failing to have it work in multiple cases, can kill the belief
+2. Pulling concepts up lowers their computational cost and increases their flexilibity
+    1. Once an abstract concept has been learned, it can be applied in nother novel situations 'for free'
+        1. There is only the risk of mis-appling the concept
+        2. The potential benefit is that learning in one situation or context can enable application of that same learning elsewhere
+        3. Higher layers of the abstraction model are cheaper and easier to compute
+            1. Measuring the area of a wall is much easier to do accurately than simulatinng putting pain on it
 3. The limit of this process could be a single, general purpose, root concept
     1. Because abstractions are functions mapping large domains onto smaller ones, each layer of an abstraction hierarchy should be smaller and have fewer concepts than the one it generalizes
     2. The root concept might be seen as 'things which are always true'

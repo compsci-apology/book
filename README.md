@@ -1,8 +1,8 @@
 # A Computer Scientist's Apology
 
-This book is an argument that computer science acts as a bridge from materialism to ancient, widely held "spiritual" truths, some of which have been considered increasingly unfashionable over the last few centuries.
+This book is an argument that computer science acts as a bridge from materialism to ancient, widely held "spiritual" truths.
 
-This book is being writen as an hierarchical network of concepts, using computer code. This is because:
+This book is being written as an hierarchical network of concepts, using computer code. This is because:
 
 1. the thesis of the book is that this sort of structure helps conceptual networks evolve, and
 2. this format allows the logical structure of the book to remain intact and consistent while presenting this logical structure to readers in various forms, and
