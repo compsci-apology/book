@@ -8,18 +8,19 @@ root = "Belief systems are strategies used by organisms"
 
 
 beliefs_are_strategies = A("Software systems and belief systems are both encoded strategies.", [
-       D("A strategy is a **bidrectional flow of information** between an agent and its environnment", [
-        A("Strategies are often expressed as if 'the state of the world' were known. This is an oversimplification.", [
-          A("In games of perfect information, which are turned based without timers, this approximation works. Computation can be ignored."),
-          A("Living oragnisms do not have perfect information about their environment, and must react and reason within latency bounds. Thus they must use **computational strategies**"),
-            A("Organisms must choose, not only how to act, but **how to think and what to pay attention to**. They must compute.", [
-              A("Thus, computational theory has implications for which strategies are viable in which contexts", [
-                R("Why Philosophers Should Care About Computational Complexity Theory, by Scott Aaronson")
-              ])
-            ]),
-        ]),
+       D("A strategy is a **computational process** performed by an agent in an environnment", [
+         A("Both evolution of species and learning within an organism must be understood as computational processes", [
+            D("The term 'ecorithm' describes an algorithm operating in an environment"),
+            R("Probably Approximately Correct, Leslie Valiant"),
+         ]),
+         A("We can use the concept of strategy to extend the concept of an ecorithm to other 'organisms' like businesses and governments ")
       ]),
-      D("Any flow of information which matches this shape could therefore be considered an agent executing a strategy", [
+ ])
+
+
+
+# interesting but not essential now
+agency_spectrum = D("Any flow of information which matches this shape could therefore be considered an agent executing a strategy", [
         A("But this is all computational processes!"),
         A("The agent/not-agent distinction might be more of a spectrum than a binary"),
         A("We argue that **any computational process** is somewhat agentic"),
@@ -34,15 +35,21 @@ beliefs_are_strategies = A("Software systems and belief systems are both encoded
          ]), 
         ]
       )
-    ])
-
 model_robots = A("All organisms and their strategies share traits in common which can be understood with an abstract model.",  [
       A("Individual human beings, businesses, and governments all have to solve similar computational problems", [
         A("they must model their enviornment and their relationship to it"), 
         A("they must navigate away from threats"),
         A("the must navigate towards opportunities."),
       ]),
-      A("Game theoriticians talk about convergent instrumental subgoals; there appear to be **convergent instrumental implementation details**", [
+      A("Game theoreticians talk about convergent instrumental subgoals; there appear to be **convergent instrumental implementation details**", [
+        R("Optimal Policies Tend to Seek Power, by Turner et alii",[ 
+          A("This work does not consider'partially observable environments' and 'suboptimal policies'")
+         ]),
+        R("Formalizing convergent instrumental goals Benson-Tilson and Soares", 
+          url="https://intelligence.org/files/FormalizingConvergentGoals.pdf",
+          supports=[
+          A("This works assumes an environment that is neither choatic, nor subject to entropic decay, and which can be observed with perfect information")
+        ]),
         A("This thesis argues that **there are numerous convergent instrumental implentation details for sufficiently advanced strategies**"),
         A("And that **these implementation details** line up with strategies articulated in numerous wisdom traditions"),
         ]

@@ -30,6 +30,9 @@ class Argument:
   supports: List[Union['Argument', str]] = field(default_factory=list)
 
 
+  @property
+  def thesis_text(self):
+    return self.thesis
 
   # turn this argument into a markdown numerical list
   def to_markdown_list(self, level=0, header_num=0):
@@ -41,9 +44,9 @@ class Argument:
     support_spaces = spaces_per_level(level+1)
 
     if level < HEADER_LEVELS:
-      header = '#'*(level+1) + f' {self.thesis} '
+      header = '#'*(level+1) + f' {self.thesis_text} '
     else:
-      header = f'{root_spaces}{header_num}. {self.thesis}'
+      header = f'{root_spaces}{header_num}. {self.thesis_text}'
 
     supports = [
           s.to_markdown_list(level+1, header_num=i) if isinstance(s, Argument) else\
@@ -65,7 +68,15 @@ class Example(Argument): pass
 # commonly used words
 class Defintion(Argument): pass
 
-class Reference(Argument): pass
+@dataclass
+class Reference(Argument):
+  url: str = None
+
+  @property
+  def thesis_text(self):
+    if self.url:
+      return f"[{self.thesis}]({self.url})"
+    return f"Ref: {self.thesis}"
 
 
 # todo: need _implications_ which combine arguments together

@@ -1,32 +1,23 @@
 # There is an optimal cognitive structure, for evolutionary and computational reasons 
 ## Belief systems are strategies used by organisms 
 ### Software systems and belief systems are both encoded strategies. 
-1. A strategy is a **bidrectional flow of information** between an agent and its environnment
-    1. Strategies are often expressed as if 'the state of the world' were known. This is an oversimplification.
-        1. In games of perfect information, which are turned based without timers, this approximation works. Computation can be ignored.
-        2. Living oragnisms do not have perfect information about their environment, and must react and reason within latency bounds. Thus they must use **computational strategies**
-        3. Organisms must choose, not only how to act, but **how to think and what to pay attention to**. They must compute.
-            1. Thus, computational theory has implications for which strategies are viable in which contexts
-                1. Why Philosophers Should Care About Computational Complexity Theory, by Scott Aaronson
-2. Any flow of information which matches this shape could therefore be considered an agent executing a strategy
-    1. But this is all computational processes!
-    2. The agent/not-agent distinction might be more of a spectrum than a binary
-    3. We argue that **any computational process** is somewhat agentic
-    4. The agency of a computational process depends on its computational structure
-        1. Computational resources constrain agency.
-            1. Time in which to compute
-            2. Space to use as working memory
-            3. Randomness is a computational resource, access to randomness constrains some algorithms
-        2. Access to energy constrains agency
-        3. Access to information constrains agency
+1. A strategy is a **computational process** performed by an agent in an environnment
+    1. Both evolution of species and learning within an organism must be understood as computational processes
+        1. The term 'ecorithm' describes an algorithm operating in an environment
+        2. Ref: Probably Approximately Correct, Leslie Valiant
+    2. We can use the concept of strategy to extend the concept of an ecorithm to other 'organisms' like businesses and governments 
 ### All organisms and their strategies share traits in common which can be understood with an abstract model. 
 1. Individual human beings, businesses, and governments all have to solve similar computational problems
     1. they must model their enviornment and their relationship to it
     2. they must navigate away from threats
     3. the must navigate towards opportunities.
-2. Game theoriticians talk about convergent instrumental subgoals; there appear to be **convergent instrumental implementation details**
-    1. This thesis argues that **there are numerous convergent instrumental implentation details for sufficiently advanced strategies**
-    2. And that **these implementation details** line up with strategies articulated in numerous wisdom traditions
+2. Game theoreticians talk about convergent instrumental subgoals; there appear to be **convergent instrumental implementation details**
+    1. Ref: Optimal Policies Tend to Seek Power, by Turner et alii
+        1. This work does not consider'partially observable environments' and 'suboptimal policies'
+    2. [Formalizing convergent instrumental goals Benson-Tilson and Soares](https://intelligence.org/files/FormalizingConvergentGoals.pdf)
+        1. This works assumes an environment that is neither choatic, nor subject to entropic decay, and which can be observed with perfect information
+    3. This thesis argues that **there are numerous convergent instrumental implentation details for sufficiently advanced strategies**
+    4. And that **these implementation details** line up with strategies articulated in numerous wisdom traditions
 3. We can consider all agents as being robots, with 'bodies' controlled by software strategies.
     1. organisms have bodies, i.e. physical structures with mechanical degrees of freedom
     2. these bodies navigate spaces
@@ -40,7 +31,7 @@
         1. A model of meaning is agorithm for computing a heading in a context
             1. i.e., a desired navigation vector in an abstract space
             2. The OODA Loop describes a computational processes
-                1. John Boyd, 'The Essence of Winning and Losing'
+                1. Ref: John Boyd, 'The Essence of Winning and Losing'
                 2. Observe: input (gather sense data from the environment)
                 3. Orient: map sense data to a conceptual model of possible actions
                 4. Decide: reduce the map of possible actions to one best action
@@ -152,7 +143,7 @@
     2. This can work safely if the parent-child relationship is context-specific
         1. i.e. the child concept has meaning (i.e. possibly contributes to motion of the body) only in a particular context
         2. e.g. Contingency Loci in bacteria
-            1. Adaptive evolution of highly mutable loci in pathogenic bacteria by Moxon, Rainey, Nowak nad Lenski
+            1. Ref: Adaptive evolution of highly mutable loci in pathogenic bacteria by Moxon, Rainey, Nowak nad Lenski
     3. This hierarchical configuration also **requires increasing abstraction at higher levels**
         1. The x86 architecture can run anything
         2. An operating system will only run programs fitting a certain format, respecting certain syscalls.
