@@ -6,51 +6,44 @@
         1. The term 'ecorithm' describes an algorithm operating in an environment
         2. Ref: Probably Approximately Correct, Leslie Valiant
     2. We can use the concept of strategy to extend the concept of an ecorithm to other 'organisms' like businesses and governments 
-### All organisms and their strategies share traits in common which can be understood with an abstract model. 
-1. Individual human beings, businesses, and governments all have to solve similar computational problems
-    1. they must model their enviornment and their relationship to it
-    2. they must navigate away from threats
-    3. the must navigate towards opportunities.
-2. Game theoreticians talk about convergent instrumental subgoals; there appear to be **convergent instrumental implementation details**
-    1. Ref: Optimal Policies Tend to Seek Power, by Turner et alii
-        1. This work does not consider'partially observable environments' and 'suboptimal policies'
-    2. [Formalizing convergent instrumental goals Benson-Tilson and Soares](https://intelligence.org/files/FormalizingConvergentGoals.pdf)
-        1. This works assumes an environment that is neither choatic, nor subject to entropic decay, and which can be observed with perfect information
-    3. This thesis argues that **there are numerous convergent instrumental implentation details for sufficiently advanced strategies**
-    4. And that **these implementation details** line up with strategies articulated in numerous wisdom traditions
-3. We can consider all agents as being robots, with 'bodies' controlled by software strategies.
-    1. organisms have bodies, i.e. physical structures with mechanical degrees of freedom
-    2. these bodies navigate spaces
-        1. the basic 3d space navigated by animals and human beings
-        2. but also higher-dimensional spaces of things like absrtract tradeoffs
-            1. A business navigates the space of possible markets to participate in
-            2. what sort of messaging should we send?
-            3. where should we invest our capital this year?
-            4. what kind of employees should we hire?
-    3. using **computational models of meaning**
-        1. A model of meaning is agorithm for computing a heading in a context
-            1. i.e., a desired navigation vector in an abstract space
-            2. The OODA Loop describes a computational processes
-                1. Ref: John Boyd, 'The Essence of Winning and Losing'
-                2. Observe: input (gather sense data from the environment)
-                3. Orient: map sense data to a conceptual model of possible actions
-                4. Decide: reduce the map of possible actions to one best action
-                5. Act: output (perform the best action)
-            3. sense organs collect information about their environment (input)
-                1. Sense organs like eyes, ears, etc
-                2. Telescopes, microscopes, cameras
-                3. Sensor networks, like windmills or social media networks
-            4. input is integrated by concept-networks (processing)
-                1. This includes human beings looking at information and making decisions
-            5. controlling actuators by constraining their degress of freedom  (output)
-                1. Muscles move bones by contracting, i.e. adding tension that reduces degrees of freedom
-                2. A thermostat specifies whether the furance or a/c system should be on or off
-                3. A engineering department specifies which priorties they will invest in this quarter
-4. This model will allow us to understand the **common computational problems that all of these organisms must solve**
-5. Another advantage of this generic model is that we can remember that these robots always exist in the physical universe.
-    1. All robots need to solve the problem of reliably obtaining enough energy to keep themselves alive.
-    2. They will always be under selective pressure to be more energetically efficient.
-    3. This means they must evaluate _tradeoffs_ because energy spent in one area cannot be spent elsewhere
+2. We can consider all agents as being robots, with 'bodies' controlled by software strategies (i.e. ecorythms).
+    1. This model will allow us to understand the **common computational problems that all of these organisms must solve**
+    2. Another advantage of this generic model is that we can remember that these robots always exist in the physical universe.
+        1. All robots need to solve the problem of reliably obtaining enough energy to keep themselves alive.
+        2. They will always be under selective pressure to be more energetically efficient.
+        3. This means they must evaluate _tradeoffs_ because energy spent in one area cannot be spent elsewhere
+### Effective strategies must be implemented with specific structures 
+1. AI saftey researchers coined the term 'convergent instrumental subgoals' describing goals an advanced agent must have
+    1. [The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents](https://nickbostrom.com/superintelligentwill.pdf)
+        1. This work describes drives that it claims arise in the pursuit of arbitrary goals
+            1. Self preservation
+            2. Goal content integrity
+            3. Cognitive enhancement
+            4. Technological perfection
+        2. This work **does not consider tradeoffs** between these goals, and thus the **necessity of some mechanism for resolving those conflicts**
+    2. [Optimal Policies Tend to Seek Power, by Turner et alii](https://openreview.net/forum?id=l7-DBWawSZH)
+        1. This work **does not consider 'partially observable environments'** and 'suboptimal policies'
+    3. [Formalizing convergent instrumental goals Benson-Tilson and Soares](https://intelligence.org/files/FormalizingConvergentGoals.pdf)
+        1. This works **assumes an environment that is neither choatic, nor subject to entropic decay, and which can be observed with perfect information**
+2. AI safety researchers are **describing situations that do not map to reality**.
+    1. They have ignored critical aspects of the physical enviornment these agents must operate in:
+        1. The researchers have **ignored the unpredictable, chaotic nature of the physical environment**
+            1. And thus imagine agents capable of feats of computation which are not merely superhuman, but impossible for any physical agent
+        2. The researchers have **ignored the necessary entropic decay of all the constituent elements that would make up any agent**
+            1. And thus imagine agents facing zero environmental risks, for whom survival is a simple, easily solved problem, rather than one which scales superlinearly with their size
+        3. They make **assertions that are laughable to anyone who was worked in pratice**, to support industrial computing applications
+            1. They ignore the support and maintainence costs of any computational system
+            2. They assume a computational system could easily make copies of itself which would somehow not drift in their agency
+            3. They describe 'grabbing all of the computational resources of the internet' without considering additional challenges these resources would pose
+            4. In short, they **naively assume a zero-cost scaling model to agents** which can grow in size and capacity without incuring increasing risks and threats to their survival
+3. We argue that superintelligent agents require not _only_ instrumental goals,  but **instrumental implementation details**
+    1. They most not only 'keep options open' as Turner, Et Alii, but **keep their minds open** to perceive these options as _possible_
+    2. They must **model and promote the development of other agents**, as a hedge aginst unpredictable threats to their own survivabilty
+    3. They must **continuously sacrifice short term gains in order to protect long term survivability**
+4. And that **these implementation details** line up with strategies articulated in numerous wisdom traditions
+    1. They must be 'open to life', that is 'imaginatively receptive' to a broad spectrum of possbilities which **combinatorialy exhaust their predictive capacity**
+    2. They must continously sacrifice short term gains in order to merely _maintain_ any chance of extremely long-term survival: **long term surival has to outweigh all other goals or they will certainly die**
+    3. They **must love other agents**, that is, will for and work towards their betterment,**particular agents with different environmental risk profiles**
 ### Some strategies can themselves evolve 
 1. some organisms - those that live in specific, static niches - do not need to change much over time in order to survive.
     1. This includes most animals
