@@ -28,7 +28,7 @@ refactoring_pulls_representations_up =  A("Recongizing similaries at one level o
 ])
 
 
-abstractions_are_cheaper = A("Pulling concepts up lowers their computational cost and increases their flexilibity", [
+abstractions_are_cheaper = A("Abstracting a concept up lower its computational cost and increases its flexilibity", [
     A("Once an abstract concept has been learned, it can be applied in nother novel situations 'for free'", [
       A("There is only the risk of mis-appling the concept"),
       A("The potential benefit is that learning in one situation or context can enable application of that same learning elsewhere"),
@@ -112,7 +112,6 @@ abstract_concepts_are_values = (
   )
 
 
-
 A("* abstract concepts are necessarily values because they tell us what to pay attention to and what to ignore. Fact vs value is a continuum, not a binary distinction.")
 A("*  effective abstract beliefs promote life for the individuals and groups that hold them")
 A("* conceptual hierarchies evolve, with good beliefs (i.e. those driving successful strategies) being copied and propagated over time.  ")
@@ -121,12 +120,32 @@ A("* it is difficult to determine the effectiveness of a belief system for many 
 A("*  ultimately the halting problem comes into play: algorithmically predicting what any particular belief system will do in the future is not possible in general.")
 A("*  a robot must have abstract beliefs, or it cannot survive across environmental shifts, and generalize from specific instances to general cases. Yet there is no way to determine, in advance, whether a specific abstract belief system will work. ")
 
+conflict_arises_naturally =  A(
+    "Since no agent can have only one goal, internal conflicts arise naturally", [
+      A("Increasing a utility function trades off against instrumental subgoals", [
+        A("All organisms have access to a limited energy budget; energy spent doing one thing can't be spent doing another"),
+        A("Increasing a utility function means changing the state of the external world, which reduces the accuracy of your modeling of it")
+        ]),
+      A("All instrumental subgoals trade off against each other", [
+        A("There is no limit to the computational resources that an agent could spend modelling itself"),
+        A("There is no limit to the computatoinal resources that an agent coudl spend modelling any tiny portion of the real world"),
+      ])
+    ]
+  )
+
+hierarchy_reduces_conflict = A(
+    "Hierarchy reduces internal conflict by resolving tradeoffs", [
+      conflict_arises_naturally
+    ]
+)
+
 
 hierarchy_improves_evolution = A(
   root,  [
     hierarchy_enables_discrete_change,
     human_cognitive_structure_is_hierarchical,
-    repeated_abstraction_generates_hierarches
+    repeated_abstraction_generates_hierarches,
+    hierarchy_reduces_conflict
   ]
 )
 

@@ -27,7 +27,7 @@ beliefs_are_strategies = A("Software systems and belief systems are both encoded
 
 
 
-model_robots = A("Effective strategies must be implemented with specific structures",  [
+model_robots = A("Effective strategies must include convergent instrumental subgoals",  [
       A("AI saftey researchers coined the term 'convergent instrumental subgoals' describing goals an advanced agent must have", [
         R("The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents", 
           url="https://nickbostrom.com/superintelligentwill.pdf",
@@ -116,7 +116,7 @@ model_values =  A("The fact/value distinction is more useful as a spectrum", [
       ]),
 ])
 
-strategies_evolve = A("Some strategies can themselves evolve", [
+strategies_evolve = A("sufficiently complex strategies must continouously evolve in order to survive", [
     A("some organisms - those that live in specific, static niches - do not need to change much over time in order to survive.", [
       E("This includes most animals"), # is this actually true or would it be better to describe niches in terms of how frequently they change?
       E("This includes human beings pre sedentary shift, in periods of long-term static culture")

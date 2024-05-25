@@ -3,19 +3,15 @@ from framework import Argument
 from strategies import strategies_evolve
 from software import software_evolves_faster
 from hierarchy import hierarchy_improves_evolution
+from disintegration import absent_hierarchy_conflict_disintegrates
+
 root = Argument(
   "There is an optimal value system.",
   supports = [
     strategies_evolve,
     software_evolves_faster,
     hierarchy_improves_evolution,
-    # TODO: Need an argument that large organisms are always composed of 
-    # smaller ones, for the reasons given above: hierarchical structure
-    # improves evolvability - or is that the same argumente as this one below?
-    Argument(
-      "Abstract beliefs as organizing principles are necessary for group "\
-          "survival."
-     ),
+    absent_hierarchy_conflict_disintegrates,
     Argument(
       "Trust in the organizing principle of the group "\
           "is necessary for group cohesion"

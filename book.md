@@ -12,7 +12,7 @@
         1. All robots need to solve the problem of reliably obtaining enough energy to keep themselves alive.
         2. They will always be under selective pressure to be more energetically efficient.
         3. This means they must evaluate _tradeoffs_ because energy spent in one area cannot be spent elsewhere
-### Effective strategies must be implemented with specific structures 
+### Effective strategies must include convergent instrumental subgoals 
 1. AI saftey researchers coined the term 'convergent instrumental subgoals' describing goals an advanced agent must have
     1. [The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents](https://nickbostrom.com/superintelligentwill.pdf)
         1. This work describes drives that it claims arise in the pursuit of arbitrary goals
@@ -44,7 +44,7 @@
     1. They must be 'open to life', that is 'imaginatively receptive' to a broad spectrum of possbilities which **combinatorialy exhaust their predictive capacity**
     2. They must continously sacrifice short term gains in order to merely _maintain_ any chance of extremely long-term survival: **long term surival has to outweigh all other goals or they will certainly die**
     3. They **must love other agents**, that is, will for and work towards their betterment, **in particular agents with different environmental risk profiles**
-### Some strategies can themselves evolve 
+### sufficiently complex strategies must continouously evolve in order to survive 
 1. some organisms - those that live in specific, static niches - do not need to change much over time in order to survive.
     1. This includes most animals
     2. This includes human beings pre sedentary shift, in periods of long-term static culture
@@ -176,7 +176,7 @@
     3. An abstract concept can be unlearned as well
         1. Falling to apply an abstract concept multiple times might lead to its breakdown
             1. Believing that some process works in all cases, and failing to have it work in multiple cases, can kill the belief
-2. Pulling concepts up lowers their computational cost and increases their flexilibity
+2. Abstracting a concept up lower its computational cost and increases its flexilibity
     1. Once an abstract concept has been learned, it can be applied in nother novel situations 'for free'
         1. There is only the risk of mis-appling the concept
         2. The potential benefit is that learning in one situation or context can enable application of that same learning elsewhere
@@ -188,7 +188,20 @@
     3. If this root concept _did_ exist and worked, it would be extremely useful becuase it would enable extremely generalized learning
         1. It would also serve as a conflict-resolution mechanism
     4. If there were no recognized similaries between all instances of lower-level abstractions, this concept would not, or could not be learned
-## Abstract beliefs as organizing principles are necessary for group survival. 
+### Hierarchy reduces internal conflict by resolving tradeoffs 
+1. Since no agent can have only one goal, internal conflicts arise naturally
+    1. Increasing a utility function trades off against instrumental subgoals
+        1. All organisms have access to a limited energy budget; energy spent doing one thing can't be spent doing another
+        2. Increasing a utility function means changing the state of the external world, which reduces the accuracy of your modeling of it
+    2. All instrumental subgoals trade off against each other
+        1. There is no limit to the computational resources that an agent could spend modelling itself
+        2. There is no limit to the computatoinal resources that an agent coudl spend modelling any tiny portion of the real world
+## Absent the correct hierarchy, internal conflict will lead to disintegration 
+### The computation done by any complex agent must be spatially distributed 
+1. Processes can only handle so much bandwidth, due to physical limits
+2. When lower-latency resposne times are required, agents using centralize processing will be outcompeted by agents with more local decisionmaking 
+### Distributed computing of motion plans for an agent inevitably leads to internal conflict between proposed motion plans 
+1. Any given agent still only has a single body with a limited energy budget
 ## Trust in the organizing principle of the group is necessary for group cohesion 
 ## The evolutionary limit of "trust in the organizing principle" is trusting reality itself. 
 ## Trusting reality itself motivates faith, hope, and love as instrumental strategies. 
