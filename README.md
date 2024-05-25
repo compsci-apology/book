@@ -12,4 +12,4 @@ You are invited to participate in this process!
 
 Feel free to submit comments or pull requests.
 
-The text of the book is generated as part of its construction, [available here](https://github.com/compsci-apology/book/blob/main/book.md).
+The text of the book is generated as part of its construction, [available here](https://html-preview.github.io/?url=https://github.com/compsci-apology/book/blob/main/book.html).
