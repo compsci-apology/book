@@ -22,6 +22,7 @@ though maybe i'll go back and do that later :)
 # todo: add in concepts like Example, Reference, Implication
 
 HEADER_LEVELS = 3
+HTML_HEADER_LEVELS = 2
 @dataclass
 class Argument:
   thesis: str
@@ -53,6 +54,34 @@ class Argument:
           f'{support_spaces}{i}. {s}' for i, s in enumerate(self.supports)
        ]
     return '\n'.join([header] + supports)
+
+  # turn this argument into html
+  def to_html(self, level=0, header_num=0):
+    # markdown lists use an indentation of 4 spaces
+
+    # humans generally count from 1 for some reason
+    header_num = header_num +1
+    root_spaces = spaces_per_level(level)
+    support_spaces = spaces_per_level(level+1)
+
+    if level < HTML_HEADER_LEVELS:
+      header = f'<h{level+1}>{self.thesis_text}</h{level+1}>'
+      support_class="section"
+      see_more_button = ''
+    else:
+      header = f'{root_spaces}<li>{self.thesis_text}</li>'
+      support_class ="hidden-section"
+      see_more_button = '<span class="see-more-button">See more</span>'
+
+
+    if not self.supports:
+      return header
+
+
+    supports =  [f'{root_spaces}<ol class="{support_class}">'] + \
+          [ s.to_html(level+1, header_num=i) for i, s in enumerate(self.supports) ]  + [f'{root_spaces}</ol>{see_more_button}']
+    return '\n'.join([header] + supports)
+
 
 def spaces_per_level(level:int):
   if level < HEADER_LEVELS:

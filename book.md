@@ -1,4 +1,4 @@
-# There is an optimal cognitive structure, for evolutionary and computational reasons 
+# There is an optimal value system. 
 ## Belief systems are strategies used by organisms 
 ### Software systems and belief systems are both encoded strategies. 
 1. A strategy is a **computational process** performed by an agent in an environnment
@@ -43,7 +43,7 @@
 4. And that **these implementation details** line up with strategies articulated in numerous wisdom traditions
     1. They must be 'open to life', that is 'imaginatively receptive' to a broad spectrum of possbilities which **combinatorialy exhaust their predictive capacity**
     2. They must continously sacrifice short term gains in order to merely _maintain_ any chance of extremely long-term survival: **long term surival has to outweigh all other goals or they will certainly die**
-    3. They **must love other agents**, that is, will for and work towards their betterment,**particular agents with different environmental risk profiles**
+    3. They **must love other agents**, that is, will for and work towards their betterment, **in particular agents with different environmental risk profiles**
 ### Some strategies can themselves evolve 
 1. some organisms - those that live in specific, static niches - do not need to change much over time in order to survive.
     1. This includes most animals

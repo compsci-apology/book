@@ -4,7 +4,7 @@ from strategies import strategies_evolve
 from software import software_evolves_faster
 from hierarchy import hierarchy_improves_evolution
 root = Argument(
-  "There is an optimal cognitive structure, for evolutionary and computational reasons",
+  "There is an optimal value system.",
   supports = [
     strategies_evolve,
     software_evolves_faster,

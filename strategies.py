@@ -75,7 +75,7 @@ model_robots = A("Effective strategies must be implemented with specific structu
       A("And that **these implementation details** line up with strategies articulated in numerous wisdom traditions", [
         D("They must be 'open to life', that is 'imaginatively receptive' to a broad spectrum of possbilities which **combinatorialy exhaust their predictive capacity**"),
         D("They must continously sacrifice short term gains in order to merely _maintain_ any chance of extremely long-term survival: **long term surival has to outweigh all other goals or they will certainly die**"),
-        D("They **must love other agents**, that is, will for and work towards their betterment,**particular agents with different environmental risk profiles**")
+        D("They **must love other agents**, that is, will for and work towards their betterment, **in particular agents with different environmental risk profiles**")
       ]),
       
    ])
