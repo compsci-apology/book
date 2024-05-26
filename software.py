@@ -2,7 +2,7 @@ from framework import Argument as A
 from framework import Defintion as D
 from framework import Example as E
 
-root = "Software Evolves Faster Than Hardware"
+root = "Evolutionary pressures select for self-awareness"
 
 
 evolution_requires_energy = A("Evolution requires energetic investment", [

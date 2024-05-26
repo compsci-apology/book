@@ -4,14 +4,16 @@ from framework import Example as E
 from framework import Reference as R
 
 
-root = "Belief systems are strategies used by organisms"
+root = "Belief systems are strategies"
 
+valiant_reference = R("Probably Approximately Correct, Leslie Valiant")
 
-beliefs_are_strategies = A("Software systems and belief systems are both encoded strategies.", [
+beliefs_are_strategies = A("Software systems and belief systems are both encoded strategies used by agents.", [
        D("A strategy is a **computational process** performed by an agent in an environnment", [
          A("Both evolution of species and learning within an organism must be understood as computational processes", [
             D("The term 'ecorithm' describes an algorithm operating in an environment"),
-            R("Probably Approximately Correct, Leslie Valiant"),
+            valiant_reference
+            
          ]),
          A("We can use the concept of strategy to extend the concept of an ecorithm to other 'organisms' like businesses and governments ")
       ]),
@@ -27,7 +29,7 @@ beliefs_are_strategies = A("Software systems and belief systems are both encoded
 
 
 
-model_robots = A("Effective strategies must include convergent instrumental subgoals",  [
+convergent_subgoals = A("self-aware agents require convergent instrumental subgoals",  [
       A("AI saftey researchers coined the term 'convergent instrumental subgoals' describing goals an advanced agent must have", [
         R("The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents", 
           url="https://nickbostrom.com/superintelligentwill.pdf",
@@ -80,6 +82,35 @@ model_robots = A("Effective strategies must include convergent instrumental subg
       
    ])
 
+strategies_evolve = A("Self-aware agents must continouously evolve in order to survive", [
+    A("some organisms - those that live in specific, static niches - do not need to change much over time in order to survive.", [
+      E("This includes most animals"), # is this actually true or would it be better to describe niches in terms of how frequently they change?
+      E("This includes human beings pre sedentary shift, in periods of long-term static culture")
+     ]),
+    A("other organisms operate in **dynamic niches**  (i.e., niches that change over time), which **requires them to evolve their strategies** in order to survive. They must be self-aware.", [
+      E("businesses in competitive industries"),
+      E("human beings in dynamic situations"),
+      E("political structures in times of change"),
+    ]),
+    A("Evolving a belief system means changing beliefs, i.e. learning and unlearning concepts."),
+    A("It is difficult to get these changes right.", [
+      A("Failing to change means death because the environment changes in ways that break your strategy"),
+      A("Changing the wrong way means breaking your strategy's alignment with the current environment"),
+    ]),
+    A("**Not all strategies are equally capable of evolving, for computational reasons.**", [
+      A("Efficiency and resilience trade off against each other"),
+      A("Resilience is a pre-requisite for evolveability"),
+      A("Organisms in dynamic niches use specific strategies to increase evolvability", [ 
+        # need to talk here about the distintion between organisms and life
+        # i.e. tlak about life 'holisticaly' rather than as merely a collection of organisms
+        # i.e. istead of seeing the organisms as what's real and life as a collection of them
+        # we can also view 'life' as being more real, and specific organisms as being, the means by which life explores speific niches
+      ]),
+    ])
+  ])
+
+
+
 # is this the place to add in turing completeness?
 
 # say later
@@ -116,38 +147,20 @@ model_values =  A("The fact/value distinction is more useful as a spectrum", [
       ]),
 ])
 
-strategies_evolve = A("sufficiently complex strategies must continouously evolve in order to survive", [
-    A("some organisms - those that live in specific, static niches - do not need to change much over time in order to survive.", [
-      E("This includes most animals"), # is this actually true or would it be better to describe niches in terms of how frequently they change?
-      E("This includes human beings pre sedentary shift, in periods of long-term static culture")
-     ]),
-    A("other organisms operate in **dynamic niches**  (i.e., niches that change over time), which **requires them to evolve their strategies** in order to survive.", [
-      E("businesses in competitive industries"),
-      E("human beings in dynamic situations"),
-      E("political structures in times of change"),
-    ]),
-    A("Evolving a belief system means changing beliefs, i.e. learning and unlearning concepts."),
-    A("It is difficult to get these changes right.", [
-      A("Failing to change means death because the environment changes in ways that break your strategy"),
-      A("Changing the wrong way means breaking your strategy's alignment with the current environment"),
-    ]),
-    A("**Not all strategies are equally capable of evolving, for computational reasons.**", [
-      A("Efficiency and resilience trade off against each other"),
-      A("Resilience is a pre-requisite for evolveability"),
-      A("Organisms in dynamic niches use specific strategies to increase evolvability", [ 
-        # need to talk here about the distintion between organisms and life
-        # i.e. tlak about life 'holisticaly' rather than as merely a collection of organisms
-        # i.e. istead of seeing the organisms as what's real and life as a collection of them
-        # we can also view 'life' as being more real, and specific organisms as being, the means by which life explores speific niches
-      ]),
-    ])
-  ])
 
+sufficiently_adavnced_agents = A("Numerous propertries attributed to AI systems really describe all self-aware agents", [
+   D("An agent is self-aware if it makes use of a representation of itself, its environment, and its goals, and it can change this representation"),
+    convergent_subgoals,
+    strategies_evolve
+  
+  ])
 
 strategies_evolve = A(root, [
     beliefs_are_strategies,
-    model_robots,
-    strategies_evolve
+    A("Animals, humans, businesses, governments and AI's are examples of increasingly complex strategies", [
+      valiant_reference
+    ]),
+    sufficiently_adavnced_agents,
    ])
 
 

@@ -1,17 +1,15 @@
 from framework import Argument
 
 from strategies import strategies_evolve
-from software import software_evolves_faster
 from hierarchy import hierarchy_improves_evolution
-from disintegration import absent_hierarchy_conflict_disintegrates
+from sacrifice import sacrifice_is_necessary
 
 root = Argument(
   "There is an optimal value system.",
   supports = [
     strategies_evolve,
-    software_evolves_faster,
     hierarchy_improves_evolution,
-    absent_hierarchy_conflict_disintegrates,
+    sacrifice_is_necessary,
     Argument(
       "Trust in the organizing principle of the group "\
           "is necessary for group cohesion"
