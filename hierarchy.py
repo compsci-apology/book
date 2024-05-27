@@ -175,10 +175,10 @@ optimal_structure = A("The necessary structure for a self-aware agent is a recur
 
 human_organizations_do_this = A("Human organizations organize themselves along this same fashion", [
   A("Businesses, goverments and militaries exist in hierarchies"),
-  A("Each node in the hierarchi advances specific subgoals"),
+  A("Each node in the hierarchy advances specific subgoals"),
   A("Self-awareness is a necessary prerequiste for adavnacing in human hierarchies"),
   A("The bottom most layers of human hierarchies are not self aware",  [
-    E("Computer programs generaly do not contain representations of themselves which they change by thsemlves"),
+    E("Computer programs generaly do not contain representations of themselves which they change by themselves"),
     E("Many human beings do not do this, either"),
    ]),
  ])

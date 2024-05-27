@@ -227,10 +227,10 @@
         2. Application-layers are the most context-specific and likely to change the fastest
 4. Human organizations organize themselves along this same fashion
     1. Businesses, goverments and militaries exist in hierarchies
-    2. Each node in the hierarchi advances specific subgoals
+    2. Each node in the hierarchy advances specific subgoals
     3. Self-awareness is a necessary prerequiste for adavnacing in human hierarchies
     4. The bottom most layers of human hierarchies are not self aware
-        1. Computer programs generaly do not contain representations of themselves which they change by thsemlves
+        1. Computer programs generaly do not contain representations of themselves which they change by themselves
         2. Many human beings do not do this, either
 ## Sacrifice, Voluntarily Suffering, and Investment are of the same essence as Generalized Learning 
 ### The essence of these is voluntarily making things worse now, in order for a chance of them improving later 
