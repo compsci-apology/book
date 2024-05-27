@@ -107,7 +107,9 @@ conflict_arises_naturally =  A(
 hierarchy_reduces_conflict = A(
     "A hierarchical structure is necessary to resolve conflict", [
       conflict_arises_naturally,
-     A("Some computational process has to select from among these tradeoffs")
+     A("Some computational process has to select from among these tradeoffs", [
+       A("Resolve internal conflicts between subgoals is itself a goal and thus any process doing this is an agent")
+     ])
   ]
 )
 
@@ -159,10 +161,10 @@ hierarchy_enables_discrete_change = A("A hierarchical structure structure is nec
 optimal_structure = A("The necessary structure for a self-aware agent is a recursive network of subagents, in a dynamic hierarchy, with a fixed root, and leaf agents which are not self-aware", [
     A("A self-aware agent must be a recursive network of subagents", [
         A("Subagent representations are necsesary for an agent to advance or evolve its implementation of any of its subgoals",  [
-         A("Anything computational process that advances a goal is an agent"),
-         A("Self aware agents must advance utilty function as well as convergent instrumental subgoals"),
-         A("therefore, any computationalp process that advances instrumental subgoals, or a utility function must be an agent"),
-      ]),
+         A("Any computational process that advances a goal is an agent"),
+         A("Self aware agents must advance their utilty function as well as numerous convergent instrumental subgoals"),
+         A("a self-aware agent must include sub-agents tasked with promoting its instrumental subgoals, or else it cannot meet the requirements for self awareness"),
+      ])
     ]),
     A("The subagent network must be hierarchical", [
       hierarchy_enables_discrete_change,
@@ -189,6 +191,10 @@ hierarchy_improves_evolution = A(
       A("Human brains, human organizations, and technogical systems exhibit this same structure", [
       human_cognitive_structure_is_hierarchical,
       repeated_abstraction_generates_hierarches,
+      A("Numerous schools of psychotherapy see human beings as consisting of subpersonalities", [
+        E("Jungian Analysis, Internal Family Systems, Transactional Analysis, Gestalt Therapy"),
+        R("Subpersonality wikipedia page", url="https://en.wikipedia.org/wiki/Subpersonality")
+      ]),
       computers_already_do_this,
       human_organizations_do_this
    ])

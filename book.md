@@ -65,9 +65,9 @@
 ### The necessary structure for a self-aware agent is a recursive network of subagents, in a dynamic hierarchy, with a fixed root, and leaf agents which are not self-aware 
 1. A self-aware agent must be a recursive network of subagents
     1. Subagent representations are necsesary for an agent to advance or evolve its implementation of any of its subgoals
-        1. Anything computational process that advances a goal is an agent
-        2. Self aware agents must advance utilty function as well as convergent instrumental subgoals
-        3. therefore, any computationalp process that advances instrumental subgoals, or a utility function must be an agent
+        1. Any computational process that advances a goal is an agent
+        2. Self aware agents must advance their utilty function as well as numerous convergent instrumental subgoals
+        3. a self-aware agent must include sub-agents tasked with promoting its instrumental subgoals, or else it cannot meet the requirements for self awareness
 2. The subagent network must be hierarchical
     1. A hierarchical structure structure is necessary for evolvability
         1. with this flexible hierarchical structure, one component can be changed, or replaced entirely, with a limited 'blast radius'
@@ -174,6 +174,7 @@
                 1. There is no limit to the computational resources that an agent could spend modelling itself
                 2. There is no limit to the computatoinal resources that an agent coudl spend modelling any tiny portion of the real world
         2. Some computational process has to select from among these tradeoffs
+            1. Resolve internal conflicts between subgoals is itself a goal and thus any process doing this is an agent
 3. The subagent network must have a fixed root
     1. If all of thee parts of a system change and evolve over time, something about it must remain the same for it to be self aware
         1. Ref: This is the resolution to the ship of thesus problem: the shape is not merely the material that makes it up, but the root essence that organizes that material
@@ -215,7 +216,10 @@
         3. If this root concept _did_ exist and worked, it would be extremely useful becuase it would enable extremely generalized learning
             1. It would also serve as a conflict-resolution mechanism
         4. If there were no recognized similaries between all instances of lower-level abstractions, this concept would not, or could not be learned
-3. Computers use this hierachical structure
+3. Numerous schools of psychotherapy see human beings as consisting of subpersonalities
+    1. Jungian Analysis, Internal Family Systems, Transactional Analysis, Gestalt Therapy
+    2. [Subpersonality wikipedia page](https://en.wikipedia.org/wiki/Subpersonality)
+4. Computers use this hierachical structure
     1. This structure appears in compute systems
         1. The x86 architecture can run anything
         2. An operating system will only run programs fitting a certain format, respecting certain syscalls.
@@ -225,7 +229,7 @@
     2. This same structure apperas in the OSI networking stack
         1. Lower layers of the OSI networking stack are braoder, more abstract and will likely last longer
         2. Application-layers are the most context-specific and likely to change the fastest
-4. Human organizations organize themselves along this same fashion
+5. Human organizations organize themselves along this same fashion
     1. Businesses, goverments and militaries exist in hierarchies
     2. Each node in the hierarchy advances specific subgoals
     3. Self-awareness is a necessary prerequiste for adavnacing in human hierarchies
