@@ -50,6 +50,11 @@
 <li>Numerous propertries attributed to AI systems really describe all self-aware agents</li>
 <ol class="hidden-section">
 <li>An agent is self-aware if it makes use of a representation of itself, its environment, and its goals, and it can change this representation</li>
+<ol class="hidden-section">
+    <li>An agent cannot be self aware if it does not contain a representation of itself</li>
+    <li>An agent's relationship to its environment is an integral part of itself, as its its goal</li>
+    <li>Any static representation of a dynamic system will drift out of alignment and fail to be accurate</li>
+</ol><span class="see-more-button">See more</span>
 <li>self-aware agents require convergent instrumental subgoals</li>
 <ol class="hidden-section">
     <li>AI saftey researchers coined the term 'convergent instrumental subgoals' describing goals an advanced agent must have</li>
@@ -110,17 +115,7 @@
 </ol><span class="see-more-button">See more</span>
 <li>Self-aware agents must continouously evolve in order to survive</li>
 <ol class="hidden-section">
-    <li>some organisms - those that live in specific, static niches - do not need to change much over time in order to survive.</li>
-    <ol class="hidden-section">
-        <li>This includes most animals</li>
-        <li>This includes human beings pre sedentary shift, in periods of long-term static culture</li>
-    </ol><span class="see-more-button">See more</span>
-    <li>other organisms operate in **dynamic niches**  (i.e., niches that change over time), which **requires them to evolve their strategies** in order to survive. They must be self-aware.</li>
-    <ol class="hidden-section">
-        <li>businesses in competitive industries</li>
-        <li>human beings in dynamic situations</li>
-        <li>political structures in times of change</li>
-    </ol><span class="see-more-button">See more</span>
+    <li>Environments change over time, agents change too, so their self-representations must evolve</li>
     <li>Evolving a belief system means changing beliefs, i.e. learning and unlearning concepts.</li>
     <li>It is difficult to get these changes right.</li>
     <ol class="hidden-section">
@@ -136,200 +131,226 @@
 </ol><span class="see-more-button">See more</span>
 </ol><span class="see-more-button">See more</span>
 </ol>
-<h2>A specific hierarchical structure is optimal for Self aware agents</h2>
+<h2>Self-aware agents must comprise a specific hierarchical structure</h2>
 <ol class="section">
-<li>The optimal structure for self-aware agents is a recursive network of subagents, in a dynamic hierarchy, with a fixed root</li>
+<li>The necessary structure for a self-aware agent is a recursive network of subagents, in a dynamic hierarchy, with a fixed root, and leaf agents which are not self-aware</li>
 <ol class="hidden-section">
-<li>This structure maximizes the evolvability of conceptual networks</li>
+<li>A self-aware agent must be a recursive network of subagents</li>
 <ol class="hidden-section">
-    <li>with this flexible hierarchical structure, one component can be changed, or replaced entirely, with a limited 'blast radius'</li>
+    <li>Subagent representations are necsesary for an agent to advance or evolve its implementation of any of its subgoals</li>
     <ol class="hidden-section">
-        <li>A 'parent' abstraction can remain identical, while the 'child' abstraction is repalced entirely</li>
-        <li>This can work safely if the parent-child relationship is context-specific</li>
-        <ol class="hidden-section">
-            <li>i.e. the child concept has meaning (i.e. possibly contributes to motion of the body) only in a particular context</li>
-            <li>e.g. Contingency Loci in bacteria</li>
-            <ol class="hidden-section">
-                <li>Ref: Adaptive evolution of highly mutable loci in pathogenic bacteria by Moxon, Rainey, Nowak nad Lenski</li>
-            </ol><span class="see-more-button">See more</span>
-        </ol><span class="see-more-button">See more</span>
-        <li>This hierarchical configuration also **requires increasing abstraction at higher levels**</li>
-        <ol class="hidden-section">
-            <li>Computers use this hierachical structure</li>
-            <ol class="hidden-section">
-                <li>This structure appears in compute systems</li>
-                <ol class="hidden-section">
-                    <li>The x86 architecture can run anything</li>
-                    <li>An operating system will only run programs fitting a certain format, respecting certain syscalls.</li>
-                    <li>A browser will only run html + javascript + css (i.e. a specific subset of programs)</li>
-                    <li>A javascript web framework will only run spcific kinds of javascript objects</li>
-                    <li>A confirmation diaglog box expects a certain kind of application state to modify</li>
-                </ol><span class="see-more-button">See more</span>
-                <li>This same structure apperas in the OSI networking stack</li>
-                <ol class="hidden-section">
-                    <li>Lower layers of the OSI networking stack are braoder, more abstract and will likely last longer</li>
-                    <li>Application-layers are the most context-specific and likely to change the fastest</li>
-                </ol><span class="see-more-button">See more</span>
-            </ol><span class="see-more-button">See more</span>
-        </ol><span class="see-more-button">See more</span>
+        <li>Anything computational process that advances a goal is an agent</li>
+        <li>Self aware agents must advance utilty function as well as convergent instrumental subgoals</li>
+        <li>therefore, any computationalp process that advances instrumental subgoals, or a utility function must be an agent</li>
     </ol><span class="see-more-button">See more</span>
-    <li>Absent the correct hierarchical structure, making discrete changes becomes impossible in large systems</li>
+</ol><span class="see-more-button">See more</span>
+<li>The subagent network must be hierarchical</li>
+<ol class="hidden-section">
+    <li>A hierarchical structure structure is necessary for evolvability</li>
     <ol class="hidden-section">
-        <li>If a change anywhere in a concept network could effect behavior in any context, the risk of changes reducing fitness goes up</li>
+        <li>with this flexible hierarchical structure, one component can be changed, or replaced entirely, with a limited 'blast radius'</li>
         <ol class="hidden-section">
-            <li> the loss function loses its approximative capacity</li>
-        </ol><span class="see-more-button">See more</span>
-        <li>One conseuqence of this is that **large systems with incorrectly defined hierarchies become incapable of change**</li>
-        <li>The only way a large hierachy can continually evolve is if the top layers are extremely lightweight and flexible</li>
-        <ol class="hidden-section">
-            <li>The layers at the top need to be almost _unopinionated_ about the precise details what happens at the bottom</li>
-            <li>instead they should focus primarily on **conflict resolution between intermediary layers**</li>
-            <li>Otherwise, changes at the top will break the bottom in many ways, some of which are hard to recognize</li>
+            <li>A 'parent' abstraction can remain identical, while the 'child' abstraction is repalced entirely</li>
+            <li>This can work safely if the parent-child relationship is context-specific</li>
             <ol class="hidden-section">
-                <li>Imagination is a computationally expensive, risky process that won't always go correctly</li>
-            </ol><span class="see-more-button">See more</span>
-        </ol><span class="see-more-button">See more</span>
-    </ol><span class="see-more-button">See more</span>
-    <li>Evolutionary pressures select for self-awareness</li>
-    <ol class="hidden-section">
-        <li>Evolving an abstraction is cheaper</li>
-        <ol class="hidden-section">
-            <li>Evolution requires energetic investment</li>
-            <ol class="hidden-section">
-                <li>Changing a house to improve some experience requires labor and materials</li>
-                <li>Releasing a new product to market requires investment</li>
-                <li>Developers take time to write, compile and test code</li>
-                <li>Performing a release takes time and attention</li>
-            </ol><span class="see-more-button">See more</span>
-            <li>The cost of change is ultimately an energetic cost. Work must be done on a system to change it.</li>
-            <li>**Changing an abstraction of an object is cheaper than changing the object itself** because less mass needs to move</li>
-            <ol class="hidden-section">
-                <li>The ENIAC was changed to use a stored program model of execution to reduce cycle cost</li>
+                <li>i.e. the child concept has meaning (i.e. possibly contributes to motion of the body) only in a particular context</li>
+                <li>e.g. Contingency Loci in bacteria</li>
                 <ol class="hidden-section">
-                    <li>Moving the cables around between programs was expensive and costly</li>
-                    <li>Changing which program was stored in memory was cheaper</li>
-                    <li>Fixing the cables in place made the machine slower to operate, but faster to evolve</li>
+                    <li>Ref: Adaptive evolution of highly mutable loci in pathogenic bacteria by Moxon, Rainey, Nowak nad Lenski</li>
                 </ol><span class="see-more-button">See more</span>
-                <li>Changing a blueprint is easier and cheaper than building a prototype</li>
-                <li>Building a prototype from a blueprint is cheaper than performing the construction</li>
-                <li>Describing a set of features is easier and cheaper than implementing those features</li>
             </ol><span class="see-more-button">See more</span>
-            <li>Organisms can use abstraction to evolve faster</li>
+            <li>This hierarchical configuration also **requires increasing abstraction at higher levels**</li>
             <ol class="hidden-section">
-                <li>An abstraction is a many-to-one function that maps a larger 'object' domain onto a smaller 'symbol' domain</li>
+                <li>Computers use this hierachical structure</li>
                 <ol class="hidden-section">
-                    <li>When 'abstracting' an object, information about the object is 'thrown out' to produce a symbol</li>
+                    <li>This structure appears in compute systems</li>
                     <ol class="hidden-section">
-                        <li>Individual objects as well as groups of objects and their relationships can be abstracted</li>
-                        <li>The geometry walls of a room can be abstracted as a set of linear shapes, with only lengths and angles</li>
+                        <li>The x86 architecture can run anything</li>
+                        <li>An operating system will only run programs fitting a certain format, respecting certain syscalls.</li>
+                        <li>A browser will only run html + javascript + css (i.e. a specific subset of programs)</li>
+                        <li>A javascript web framework will only run spcific kinds of javascript objects</li>
+                        <li>A confirmation diaglog box expects a certain kind of application state to modify</li>
                     </ol><span class="see-more-button">See more</span>
-                    <li>Abstractions can be chained; symbols themselves can be abstracted further</li>
-                    <li>Abstractions can be also be incarnated</li>
+                    <li>This same structure apperas in the OSI networking stack</li>
                     <ol class="hidden-section">
-                        <li>a symbol can be used to select transformations of the object domain such that the object domain now maps to the symbol</li>
-                        <ol class="hidden-section">
-                            <li>A blueprint can be used to build a house</li>
-                            <li>A textual description of a computer program can be turned into source code</li>
-                            <li>An image or a feeling can be used to guide the creation of a song or painting</li>
-                        </ol><span class="see-more-button">See more</span>
+                        <li>Lower layers of the OSI networking stack are braoder, more abstract and will likely last longer</li>
+                        <li>Application-layers are the most context-specific and likely to change the fastest</li>
                     </ol><span class="see-more-button">See more</span>
                 </ol><span class="see-more-button">See more</span>
-                <li>Absractions can also be applied to motions</li>
+            </ol><span class="see-more-button">See more</span>
+        </ol><span class="see-more-button">See more</span>
+        <li>Absent the correct hierarchical structure, making discrete changes becomes impossible in large systems</li>
+        <ol class="hidden-section">
+            <li>If a change anywhere in a concept network could effect behavior in any context, the risk of changes reducing fitness goes up</li>
+            <ol class="hidden-section">
+                <li> the loss function loses its approximative capacity</li>
+            </ol><span class="see-more-button">See more</span>
+            <li>One conseuqence of this is that **large systems with incorrectly defined hierarchies become incapable of change**</li>
+            <li>The only way a large hierachy can continually evolve is if the top layers are extremely lightweight and flexible</li>
+            <ol class="hidden-section">
+                <li>The layers at the top need to be almost _unopinionated_ about the precise details what happens at the bottom</li>
+                <li>instead they should focus primarily on **conflict resolution between intermediary layers**</li>
+                <li>Otherwise, changes at the top will break the bottom in many ways, some of which are hard to recognize</li>
                 <ol class="hidden-section">
-                    <li>Rather than causing a muscle to contract directly, an abstraction can represent contractions of muscle groups</li>
+                    <li>Imagination is a computationally expensive, risky process that won't always go correctly</li>
                 </ol><span class="see-more-button">See more</span>
-                <li>A loss function maps symbols to numerical scores.</li>
+            </ol><span class="see-more-button">See more</span>
+        </ol><span class="see-more-button">See more</span>
+        <li>Evolutionary pressures select for self-awareness</li>
+        <ol class="hidden-section">
+            <li>Evolving an abstraction is cheaper</li>
+            <ol class="hidden-section">
+                <li>Evolution requires energetic investment</li>
                 <ol class="hidden-section">
-                    <li>A utility function can be see as a kind of loss function; the two are almost, but not quite equiavlent.</li>
+                    <li>Changing a house to improve some experience requires labor and materials</li>
+                    <li>Releasing a new product to market requires investment</li>
+                    <li>Developers take time to write, compile and test code</li>
+                    <li>Performing a release takes time and attention</li>
+                </ol><span class="see-more-button">See more</span>
+                <li>The cost of change is ultimately an energetic cost. Work must be done on a system to change it.</li>
+                <li>**Changing an abstraction of an object is cheaper than changing the object itself** because less mass needs to move</li>
+                <ol class="hidden-section">
+                    <li>The ENIAC was changed to use a stored program model of execution to reduce cycle cost</li>
                     <ol class="hidden-section">
-                        <li>Ignoring hardware constraints, these two are identical</li>
+                        <li>Moving the cables around between programs was expensive and costly</li>
+                        <li>Changing which program was stored in memory was cheaper</li>
+                        <li>Fixing the cables in place made the machine slower to operate, but faster to evolve</li>
+                    </ol><span class="see-more-button">See more</span>
+                    <li>Changing a blueprint is easier and cheaper than building a prototype</li>
+                    <li>Building a prototype from a blueprint is cheaper than performing the construction</li>
+                    <li>Describing a set of features is easier and cheaper than implementing those features</li>
+                </ol><span class="see-more-button">See more</span>
+                <li>Organisms can use abstraction to evolve faster</li>
+                <ol class="hidden-section">
+                    <li>An abstraction is a many-to-one function that maps a larger 'object' domain onto a smaller 'symbol' domain</li>
+                    <ol class="hidden-section">
+                        <li>When 'abstracting' an object, information about the object is 'thrown out' to produce a symbol</li>
                         <ol class="hidden-section">
-                            <li>Maximizing x is mathematically equal to minizing the value of -x</li>
+                            <li>Individual objects as well as groups of objects and their relationships can be abstracted</li>
+                            <li>The geometry walls of a room can be abstracted as a set of linear shapes, with only lengths and angles</li>
                         </ol><span class="see-more-button">See more</span>
-                        <li>Given hardware constraints, there is a big difference</li>
+                        <li>Abstractions can be chained; symbols themselves can be abstracted further</li>
+                        <li>Abstractions can be also be incarnated</li>
                         <ol class="hidden-section">
-                            <li>maximizing gain requires more effort as more gains are accomplished</li>
+                            <li>a symbol can be used to select transformations of the object domain such that the object domain now maps to the symbol</li>
                             <ol class="hidden-section">
-                                <li>A utility function has the state of the entire universe as its input</li>
-                                <li>Some portions can be considered irrelevant, but as utility increases, more needs to be modeled</li>
+                                <li>A blueprint can be used to build a house</li>
+                                <li>A textual description of a computer program can be turned into source code</li>
+                                <li>An image or a feeling can be used to guide the creation of a song or painting</li>
+                            </ol><span class="see-more-button">See more</span>
+                        </ol><span class="see-more-button">See more</span>
+                    </ol><span class="see-more-button">See more</span>
+                    <li>Absractions can also be applied to motions</li>
+                    <ol class="hidden-section">
+                        <li>Rather than causing a muscle to contract directly, an abstraction can represent contractions of muscle groups</li>
+                    </ol><span class="see-more-button">See more</span>
+                    <li>A loss function maps symbols to numerical scores.</li>
+                    <ol class="hidden-section">
+                        <li>A utility function can be see as a kind of loss function; the two are almost, but not quite equiavlent.</li>
+                        <ol class="hidden-section">
+                            <li>Ignoring hardware constraints, these two are identical</li>
+                            <ol class="hidden-section">
+                                <li>Maximizing x is mathematically equal to minizing the value of -x</li>
+                            </ol><span class="see-more-button">See more</span>
+                            <li>Given hardware constraints, there is a big difference</li>
+                            <ol class="hidden-section">
+                                <li>maximizing gain requires more effort as more gains are accomplished</li>
                                 <ol class="hidden-section">
-                                    <li>A paperclip maximizer has to keep track of all the paperclips it has produced and where it has produced them and where they have been stored</li>
-                                    <li>It has to be very careful not to accidentally consume its own input</li>
+                                    <li>A utility function has the state of the entire universe as its input</li>
+                                    <li>Some portions can be considered irrelevant, but as utility increases, more needs to be modeled</li>
+                                    <ol class="hidden-section">
+                                        <li>A paperclip maximizer has to keep track of all the paperclips it has produced and where it has produced them and where they have been stored</li>
+                                        <li>It has to be very careful not to accidentally consume its own input</li>
+                                    </ol><span class="see-more-button">See more</span>
+                                </ol><span class="see-more-button">See more</span>
+                                <li>minimizing loss is cheaper than maximizing gain because _only_ the loss need be modeled</li>
+                                <ol class="hidden-section">
+                                    <li>An abstracted loss function essentially presumes some external _truth_ and attempts to measure only deviations from it</li>
+                                    <li>**This is far computationally cheaper than attempting to continuously model the state of the entire universe**</li>
                                 </ol><span class="see-more-button">See more</span>
                             </ol><span class="see-more-button">See more</span>
-                            <li>minimizing loss is cheaper than maximizing gain because _only_ the loss need be modeled</li>
-                            <ol class="hidden-section">
-                                <li>An abstracted loss function essentially presumes some external _truth_ and attempts to measure only deviations from it</li>
-                                <li>**This is far computationally cheaper than attempting to continuously model the state of the entire universe**</li>
-                            </ol><span class="see-more-button">See more</span>
                         </ol><span class="see-more-button">See more</span>
                     </ol><span class="see-more-button">See more</span>
-                </ol><span class="see-more-button">See more</span>
-                <li>An organism evolves using abstraction</li>
-                <ol class="hidden-section">
-                    <li>by computing abstractions of itself</li>
+                    <li>An organism evolves using abstraction</li>
                     <ol class="hidden-section">
-                        <li>i.e. imagining ways it could be, or could act, or could move, or could communicate</li>
+                        <li>by computing abstractions of itself</li>
+                        <ol class="hidden-section">
+                            <li>i.e. imagining ways it could be, or could act, or could move, or could communicate</li>
+                        </ol><span class="see-more-button">See more</span>
+                        <li>computing the loss function on these abstractions</li>
+                        <li>and acting to incarnate the lowest scoring abstraction</li>
                     </ol><span class="see-more-button">See more</span>
-                    <li>computing the loss function on these abstractions</li>
-                    <li>and acting to incarnate the lowest scoring abstraction</li>
                 </ol><span class="see-more-button">See more</span>
             </ol><span class="see-more-button">See more</span>
-        </ol><span class="see-more-button">See more</span>
-        <li>Abstraction functions can _also_ evolve</li>
-        <ol class="hidden-section">
-            <li>Because using abstraction has a cost and risk, abstraction functions themselves can evolve</li>
+            <li>Abstraction functions can _also_ evolve</li>
             <ol class="hidden-section">
-                <li>An architect might shift to a new style of blueprints which is faster to make and change</li>
-                <li>The 'annual spring reorg' at Google</li>
-                <li>Software engineers might refactor code to produce the same results in a way that's eaiser to change in the future</li>
-                <li>Loss functions - because they are abstractions of the true environmental loss function - can evolve too</li>
+                <li>Because using abstraction has a cost and risk, abstraction functions themselves can evolve</li>
                 <ol class="hidden-section">
-                    <li>A business might develop new key performance indicators that it uses to determine the performance of its strategies</li>
+                    <li>An architect might shift to a new style of blueprints which is faster to make and change</li>
+                    <li>The 'annual spring reorg' at Google</li>
+                    <li>Software engineers might refactor code to produce the same results in a way that's eaiser to change in the future</li>
+                    <li>Loss functions - because they are abstractions of the true environmental loss function - can evolve too</li>
+                    <ol class="hidden-section">
+                        <li>A business might develop new key performance indicators that it uses to determine the performance of its strategies</li>
+                    </ol><span class="see-more-button">See more</span>
+                </ol><span class="see-more-button">See more</span>
+            </ol><span class="see-more-button">See more</span>
+            <li>Using abstractions adds a new risk category</li>
+            <ol class="hidden-section">
+                <li>The fitness of an organism is determined over long periods of time by the environment itself</li>
+                <li>The fitness of a symbol is determined by the loss function</li>
+                <li>The loss function itself is an approximation of 'the true loss function' of the environment</li>
+                <ol class="hidden-section">
+                    <li>A program which fails to compile cannot make the business money</li>
+                    <li>A program which fails unit tests will likely not reliably make the business money, even if it's faster</li>
+                    <li>A program which passes all the unit tests, and performs some critical functions faster, in a domain where speed is rewarded, is more likely to make the business money</li>
+                    <li>A program which runs faster might not matter at all to the business and its development could thus represent waste</li>
+                </ol><span class="see-more-button">See more</span>
+                <li>Modifying a symbol in a way that reduces its computed loss might not incarnate an object whose _actual_ loss is lower.</li>
+                <ol class="hidden-section">
+                    <li>The loss function only an _approximation_ of the true loss function</li>
+                    <li>Releasing a software change is always risky even if it tests well</li>
+                    <li>A new marketing campaign might fail even if it did well in focus groups</li>
+                    <li>A strategy that performed well in simulated combat might not do well in actual battle</li>
+                </ol><span class="see-more-button">See more</span>
+                <li>Short term performance and even historical performance, are merely inputs to expected future performance</li>
+                <ol class="hidden-section">
+                    <li>A strategy that has worked well in the past, might have depended on transient environmental conditions</li>
                 </ol><span class="see-more-button">See more</span>
             </ol><span class="see-more-button">See more</span>
         </ol><span class="see-more-button">See more</span>
-        <li>Using abstractions adds a new risk category</li>
-        <ol class="hidden-section">
-            <li>The fitness of an organism is determined over long periods of time by the environment itself</li>
-            <li>The fitness of a symbol is determined by the loss function</li>
-            <li>The loss function itself is an approximation of 'the true loss function' of the environment</li>
-            <ol class="hidden-section">
-                <li>A program which fails to compile cannot make the business money</li>
-                <li>A program which fails unit tests will likely not reliably make the business money, even if it's faster</li>
-                <li>A program which passes all the unit tests, and performs some critical functions faster, in a domain where speed is rewarded, is more likely to make the business money</li>
-                <li>A program which runs faster might not matter at all to the business and its development could thus represent waste</li>
-            </ol><span class="see-more-button">See more</span>
-            <li>Modifying a symbol in a way that reduces its computed loss might not incarnate an object whose _actual_ loss is lower.</li>
-            <ol class="hidden-section">
-                <li>The loss function only an _approximation_ of the true loss function</li>
-                <li>Releasing a software change is always risky even if it tests well</li>
-                <li>A new marketing campaign might fail even if it did well in focus groups</li>
-                <li>A strategy that performed well in simulated combat might not do well in actual battle</li>
-            </ol><span class="see-more-button">See more</span>
-            <li>Short term performance and even historical performance, are merely inputs to expected future performance</li>
-            <ol class="hidden-section">
-                <li>A strategy that has worked well in the past, might have depended on transient environmental conditions</li>
-            </ol><span class="see-more-button">See more</span>
-        </ol><span class="see-more-button">See more</span>
     </ol><span class="see-more-button">See more</span>
-</ol><span class="see-more-button">See more</span>
-<li>This hierarchy reduces the cost of internal conflict by reliably resolving tradeoffs</li>
-<ol class="hidden-section">
-    <li>Since no agent can have only one goal, internal conflicts arise naturally</li>
+    <li>A hierarchical structure is necessary to resolve conflict</li>
     <ol class="hidden-section">
-        <li>Increasing a utility function trades off against instrumental subgoals</li>
+        <li>Since no agent can have only one goal, internal conflicts arise naturally</li>
         <ol class="hidden-section">
-            <li>All organisms have access to a limited energy budget; energy spent doing one thing can't be spent doing another</li>
-            <li>Increasing a utility function means changing the state of the external world, which reduces the accuracy of your modeling of it</li>
+            <li>Increasing a utility function trades off against instrumental subgoals</li>
+            <ol class="hidden-section">
+                <li>All organisms have access to a limited energy budget; energy spent doing one thing can't be spent doing another</li>
+                <li>Increasing a utility function means changing the state of the external world, which reduces the accuracy of your modeling of it</li>
+            </ol><span class="see-more-button">See more</span>
+            <li>All instrumental subgoals trade off against each other</li>
+            <ol class="hidden-section">
+                <li>There is no limit to the computational resources that an agent could spend modelling itself</li>
+                <li>There is no limit to the computatoinal resources that an agent coudl spend modelling any tiny portion of the real world</li>
+            </ol><span class="see-more-button">See more</span>
         </ol><span class="see-more-button">See more</span>
-        <li>All instrumental subgoals trade off against each other</li>
-        <ol class="hidden-section">
-            <li>There is no limit to the computational resources that an agent could spend modelling itself</li>
-            <li>There is no limit to the computatoinal resources that an agent coudl spend modelling any tiny portion of the real world</li>
-        </ol><span class="see-more-button">See more</span>
+        <li>Some computational process has to select from among these tradeoffs</li>
     </ol><span class="see-more-button">See more</span>
 </ol><span class="see-more-button">See more</span>
+<li>The subagent network must have a fixed root</li>
+<ol class="hidden-section">
+    <li>If all of thee parts of a system change and evolve over time, something about it must remain the same for it to be self aware</li>
+    <ol class="hidden-section">
+        <li>Ref: This is the resolution to the ship of thesus problem: the shape is not merely the material that makes it up, but the root essence that organizes that material</li>
+    </ol><span class="see-more-button">See more</span>
+    <li>The utility function cannot be this root, because a utility function alone cannot resolve tradeoffs between instrumental subgoals</li>
+    <li>The root has to be abstract precisely so that it can avoid the need for evolution</li>
+    <ol class="hidden-section">
+        <li>The unchanging, abstract nature of this root characterizes eastern tradition assertions about the emptiness of the self (Śūnyatā)</li>
+    </ol><span class="see-more-button">See more</span>
+</ol><span class="see-more-button">See more</span>
+<li>This recursive subagent network has to bottom out with non-self aware agents so that the recursion doesn't go on forever</li>
 </ol><span class="see-more-button">See more</span>
 <li>Human brains, human organizations, and technogical systems exhibit this same structure</li>
 <ol class="hidden-section">
@@ -406,6 +427,17 @@
     <ol class="hidden-section">
         <li>Lower layers of the OSI networking stack are braoder, more abstract and will likely last longer</li>
         <li>Application-layers are the most context-specific and likely to change the fastest</li>
+    </ol><span class="see-more-button">See more</span>
+</ol><span class="see-more-button">See more</span>
+<li>Human organizations organize themselves along this same fashion</li>
+<ol class="hidden-section">
+    <li>Businesses, goverments and militaries exist in hierarchies</li>
+    <li>Each node in the hierarchi advances specific subgoals</li>
+    <li>Self-awareness is a necessary prerequiste for adavnacing in human hierarchies</li>
+    <li>The bottom most layers of human hierarchies are not self aware</li>
+    <ol class="hidden-section">
+        <li>Computer programs generaly do not contain representations of themselves which they change by thsemlves</li>
+        <li>Many human beings do not do this, either</li>
     </ol><span class="see-more-button">See more</span>
 </ol><span class="see-more-button">See more</span>
 </ol><span class="see-more-button">See more</span>

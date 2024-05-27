@@ -5,7 +5,7 @@ from framework import Reference as R
 
 from software import software_evolves_faster 
 
-root = "A specific hierarchical structure is optimal for Self aware agents"
+root = "Self-aware agents must comprise a specific hierarchical structure"
 
 
 human_cognitive_structure_is_hierarchical =  A("Memories, beliefs, and abstract concepts exist in a hierarchy of abstraction matching this shape", [
@@ -105,12 +105,27 @@ conflict_arises_naturally =  A(
   )
 
 hierarchy_reduces_conflict = A(
-    "This hierarchy reduces the cost of internal conflict by reliably resolving tradeoffs", [
-      conflict_arises_naturally
-    ]
+    "A hierarchical structure is necessary to resolve conflict", [
+      conflict_arises_naturally,
+     A("Some computational process has to select from among these tradeoffs")
+  ]
 )
 
-hierarchy_enables_discrete_change = A("This structure maximizes the evolvability of conceptual networks", [
+
+self_awareness_requires_fixed_root = A(
+    "The subagent network must have a fixed root", [
+     A("If all of thee parts of a system change and evolve over time, something about it must remain the same for it to be self aware", [
+       R("This is the resolution to the ship of thesus problem: the shape is not merely the material that makes it up, but the root essence that organizes that material")
+     ]),
+     A("The utility function cannot be this root, because a utility function alone cannot resolve tradeoffs between instrumental subgoals"),
+     A("The root has to be abstract precisely so that it can avoid the need for evolution", [
+       A("The unchanging, abstract nature of this root characterizes eastern tradition assertions about the emptiness of the self (Śūnyatā)")
+     ]),
+  ]
+)
+  
+
+hierarchy_enables_discrete_change = A("A hierarchical structure structure is necessary for evolvability", [
     A("with this flexible hierarchical structure, one component can be changed, or replaced entirely, with a limited 'blast radius'", [
     A("A 'parent' abstraction can remain identical, while the 'child' abstraction is repalced entirely"),
     A("This can work safely if the parent-child relationship is context-specific", [
@@ -141,16 +156,41 @@ hierarchy_enables_discrete_change = A("This structure maximizes the evolvability
    software_evolves_faster
 ])
 
-hierarchy_improves_evolution = A(
-  root,  [
-    A("The optimal structure for self-aware agents is a recursive network of subagents, in a dynamic hierarchy, with a fixed root", [
+optimal_structure = A("The necessary structure for a self-aware agent is a recursive network of subagents, in a dynamic hierarchy, with a fixed root, and leaf agents which are not self-aware", [
+    A("A self-aware agent must be a recursive network of subagents", [
+        A("Subagent representations are necsesary for an agent to advance or evolve its implementation of any of its subgoals",  [
+         A("Anything computational process that advances a goal is an agent"),
+         A("Self aware agents must advance utilty function as well as convergent instrumental subgoals"),
+         A("therefore, any computationalp process that advances instrumental subgoals, or a utility function must be an agent"),
+      ]),
+    ]),
+    A("The subagent network must be hierarchical", [
       hierarchy_enables_discrete_change,
       hierarchy_reduces_conflict,
-    ]),
-    A("Human brains, human organizations, and technogical systems exhibit this same structure", [
+     ]),
+    self_awareness_requires_fixed_root,
+    A("This recursive subagent network has to bottom out with non-self aware agents so that the recursion doesn't go on forever")
+ ])
+
+
+human_organizations_do_this = A("Human organizations organize themselves along this same fashion", [
+  A("Businesses, goverments and militaries exist in hierarchies"),
+  A("Each node in the hierarchi advances specific subgoals"),
+  A("Self-awareness is a necessary prerequiste for adavnacing in human hierarchies"),
+  A("The bottom most layers of human hierarchies are not self aware",  [
+    E("Computer programs generaly do not contain representations of themselves which they change by thsemlves"),
+    E("Many human beings do not do this, either"),
+   ]),
+ ])
+
+hierarchy_improves_evolution = A(
+  root,  [
+      optimal_structure,
+      A("Human brains, human organizations, and technogical systems exhibit this same structure", [
       human_cognitive_structure_is_hierarchical,
       repeated_abstraction_generates_hierarches,
-      computers_already_do_this
+      computers_already_do_this,
+      human_organizations_do_this
    ])
   ]
 )

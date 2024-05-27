@@ -16,6 +16,9 @@
 1. Ref: Probably Approximately Correct, Leslie Valiant
 ### Numerous propertries attributed to AI systems really describe all self-aware agents 
 1. An agent is self-aware if it makes use of a representation of itself, its environment, and its goals, and it can change this representation
+    1. An agent cannot be self aware if it does not contain a representation of itself
+    2. An agent's relationship to its environment is an integral part of itself, as its its goal
+    3. Any static representation of a dynamic system will drift out of alignment and fail to be accurate
 2. self-aware agents require convergent instrumental subgoals
     1. AI saftey researchers coined the term 'convergent instrumental subgoals' describing goals an advanced agent must have
         1. [The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents](https://nickbostrom.com/superintelligentwill.pdf)
@@ -49,127 +52,135 @@
         2. They must continously sacrifice short term gains in order to merely _maintain_ any chance of extremely long-term survival: **long term surival has to outweigh all other goals or they will certainly die**
         3. They **must love other agents**, that is, will for and work towards their betterment, **in particular agents with different environmental risk profiles**
 3. Self-aware agents must continouously evolve in order to survive
-    1. some organisms - those that live in specific, static niches - do not need to change much over time in order to survive.
-        1. This includes most animals
-        2. This includes human beings pre sedentary shift, in periods of long-term static culture
-    2. other organisms operate in **dynamic niches**  (i.e., niches that change over time), which **requires them to evolve their strategies** in order to survive. They must be self-aware.
-        1. businesses in competitive industries
-        2. human beings in dynamic situations
-        3. political structures in times of change
-    3. Evolving a belief system means changing beliefs, i.e. learning and unlearning concepts.
-    4. It is difficult to get these changes right.
+    1. Environments change over time, agents change too, so their self-representations must evolve
+    2. Evolving a belief system means changing beliefs, i.e. learning and unlearning concepts.
+    3. It is difficult to get these changes right.
         1. Failing to change means death because the environment changes in ways that break your strategy
         2. Changing the wrong way means breaking your strategy's alignment with the current environment
-    5. **Not all strategies are equally capable of evolving, for computational reasons.**
+    4. **Not all strategies are equally capable of evolving, for computational reasons.**
         1. Efficiency and resilience trade off against each other
         2. Resilience is a pre-requisite for evolveability
         3. Organisms in dynamic niches use specific strategies to increase evolvability
-## A specific hierarchical structure is optimal for Self aware agents 
-### The optimal structure for self-aware agents is a recursive network of subagents, in a dynamic hierarchy, with a fixed root 
-1. This structure maximizes the evolvability of conceptual networks
-    1. with this flexible hierarchical structure, one component can be changed, or replaced entirely, with a limited 'blast radius'
-        1. A 'parent' abstraction can remain identical, while the 'child' abstraction is repalced entirely
-        2. This can work safely if the parent-child relationship is context-specific
-            1. i.e. the child concept has meaning (i.e. possibly contributes to motion of the body) only in a particular context
-            2. e.g. Contingency Loci in bacteria
-                1. Ref: Adaptive evolution of highly mutable loci in pathogenic bacteria by Moxon, Rainey, Nowak nad Lenski
-        3. This hierarchical configuration also **requires increasing abstraction at higher levels**
-            1. Computers use this hierachical structure
-                1. This structure appears in compute systems
-                    1. The x86 architecture can run anything
-                    2. An operating system will only run programs fitting a certain format, respecting certain syscalls.
-                    3. A browser will only run html + javascript + css (i.e. a specific subset of programs)
-                    4. A javascript web framework will only run spcific kinds of javascript objects
-                    5. A confirmation diaglog box expects a certain kind of application state to modify
-                2. This same structure apperas in the OSI networking stack
-                    1. Lower layers of the OSI networking stack are braoder, more abstract and will likely last longer
-                    2. Application-layers are the most context-specific and likely to change the fastest
-    2. Absent the correct hierarchical structure, making discrete changes becomes impossible in large systems
-        1. If a change anywhere in a concept network could effect behavior in any context, the risk of changes reducing fitness goes up
-            1.  the loss function loses its approximative capacity
-        2. One conseuqence of this is that **large systems with incorrectly defined hierarchies become incapable of change**
-        3. The only way a large hierachy can continually evolve is if the top layers are extremely lightweight and flexible
-            1. The layers at the top need to be almost _unopinionated_ about the precise details what happens at the bottom
-            2. instead they should focus primarily on **conflict resolution between intermediary layers**
-            3. Otherwise, changes at the top will break the bottom in many ways, some of which are hard to recognize
-                1. Imagination is a computationally expensive, risky process that won't always go correctly
-    3. Evolutionary pressures select for self-awareness
-        1. Evolving an abstraction is cheaper
-            1. Evolution requires energetic investment
-                1. Changing a house to improve some experience requires labor and materials
-                2. Releasing a new product to market requires investment
-                3. Developers take time to write, compile and test code
-                4. Performing a release takes time and attention
-            2. The cost of change is ultimately an energetic cost. Work must be done on a system to change it.
-            3. **Changing an abstraction of an object is cheaper than changing the object itself** because less mass needs to move
-                1. The ENIAC was changed to use a stored program model of execution to reduce cycle cost
-                    1. Moving the cables around between programs was expensive and costly
-                    2. Changing which program was stored in memory was cheaper
-                    3. Fixing the cables in place made the machine slower to operate, but faster to evolve
-                2. Changing a blueprint is easier and cheaper than building a prototype
-                3. Building a prototype from a blueprint is cheaper than performing the construction
-                4. Describing a set of features is easier and cheaper than implementing those features
-            4. Organisms can use abstraction to evolve faster
-                1. An abstraction is a many-to-one function that maps a larger 'object' domain onto a smaller 'symbol' domain
-                    1. When 'abstracting' an object, information about the object is 'thrown out' to produce a symbol
-                        1. Individual objects as well as groups of objects and their relationships can be abstracted
-                        2. The geometry walls of a room can be abstracted as a set of linear shapes, with only lengths and angles
-                    2. Abstractions can be chained; symbols themselves can be abstracted further
-                    3. Abstractions can be also be incarnated
-                        1. a symbol can be used to select transformations of the object domain such that the object domain now maps to the symbol
-                            1. A blueprint can be used to build a house
-                            2. A textual description of a computer program can be turned into source code
-                            3. An image or a feeling can be used to guide the creation of a song or painting
-                2. Absractions can also be applied to motions
-                    1. Rather than causing a muscle to contract directly, an abstraction can represent contractions of muscle groups
-                3. A loss function maps symbols to numerical scores.
-                    1. A utility function can be see as a kind of loss function; the two are almost, but not quite equiavlent.
-                        1. Ignoring hardware constraints, these two are identical
-                            1. Maximizing x is mathematically equal to minizing the value of -x
-                        2. Given hardware constraints, there is a big difference
-                            1. maximizing gain requires more effort as more gains are accomplished
-                                1. A utility function has the state of the entire universe as its input
-                                2. Some portions can be considered irrelevant, but as utility increases, more needs to be modeled
-                                    1. A paperclip maximizer has to keep track of all the paperclips it has produced and where it has produced them and where they have been stored
-                                    2. It has to be very careful not to accidentally consume its own input
-                            2. minimizing loss is cheaper than maximizing gain because _only_ the loss need be modeled
-                                1. An abstracted loss function essentially presumes some external _truth_ and attempts to measure only deviations from it
-                                2. **This is far computationally cheaper than attempting to continuously model the state of the entire universe**
-                4. An organism evolves using abstraction
-                    1. by computing abstractions of itself
-                        1. i.e. imagining ways it could be, or could act, or could move, or could communicate
-                    2. computing the loss function on these abstractions
-                    3. and acting to incarnate the lowest scoring abstraction
-        2. Abstraction functions can _also_ evolve
-            1. Because using abstraction has a cost and risk, abstraction functions themselves can evolve
-                1. An architect might shift to a new style of blueprints which is faster to make and change
-                2. The 'annual spring reorg' at Google
-                3. Software engineers might refactor code to produce the same results in a way that's eaiser to change in the future
-                4. Loss functions - because they are abstractions of the true environmental loss function - can evolve too
-                    1. A business might develop new key performance indicators that it uses to determine the performance of its strategies
-        3. Using abstractions adds a new risk category
-            1. The fitness of an organism is determined over long periods of time by the environment itself
-            2. The fitness of a symbol is determined by the loss function
-            3. The loss function itself is an approximation of 'the true loss function' of the environment
-                1. A program which fails to compile cannot make the business money
-                2. A program which fails unit tests will likely not reliably make the business money, even if it's faster
-                3. A program which passes all the unit tests, and performs some critical functions faster, in a domain where speed is rewarded, is more likely to make the business money
-                4. A program which runs faster might not matter at all to the business and its development could thus represent waste
-            4. Modifying a symbol in a way that reduces its computed loss might not incarnate an object whose _actual_ loss is lower.
-                1. The loss function only an _approximation_ of the true loss function
-                2. Releasing a software change is always risky even if it tests well
-                3. A new marketing campaign might fail even if it did well in focus groups
-                4. A strategy that performed well in simulated combat might not do well in actual battle
-            5. Short term performance and even historical performance, are merely inputs to expected future performance
-                1. A strategy that has worked well in the past, might have depended on transient environmental conditions
-2. This hierarchy reduces the cost of internal conflict by reliably resolving tradeoffs
-    1. Since no agent can have only one goal, internal conflicts arise naturally
-        1. Increasing a utility function trades off against instrumental subgoals
-            1. All organisms have access to a limited energy budget; energy spent doing one thing can't be spent doing another
-            2. Increasing a utility function means changing the state of the external world, which reduces the accuracy of your modeling of it
-        2. All instrumental subgoals trade off against each other
-            1. There is no limit to the computational resources that an agent could spend modelling itself
-            2. There is no limit to the computatoinal resources that an agent coudl spend modelling any tiny portion of the real world
+## Self-aware agents must comprise a specific hierarchical structure 
+### The necessary structure for a self-aware agent is a recursive network of subagents, in a dynamic hierarchy, with a fixed root, and leaf agents which are not self-aware 
+1. A self-aware agent must be a recursive network of subagents
+    1. Subagent representations are necsesary for an agent to advance or evolve its implementation of any of its subgoals
+        1. Anything computational process that advances a goal is an agent
+        2. Self aware agents must advance utilty function as well as convergent instrumental subgoals
+        3. therefore, any computationalp process that advances instrumental subgoals, or a utility function must be an agent
+2. The subagent network must be hierarchical
+    1. A hierarchical structure structure is necessary for evolvability
+        1. with this flexible hierarchical structure, one component can be changed, or replaced entirely, with a limited 'blast radius'
+            1. A 'parent' abstraction can remain identical, while the 'child' abstraction is repalced entirely
+            2. This can work safely if the parent-child relationship is context-specific
+                1. i.e. the child concept has meaning (i.e. possibly contributes to motion of the body) only in a particular context
+                2. e.g. Contingency Loci in bacteria
+                    1. Ref: Adaptive evolution of highly mutable loci in pathogenic bacteria by Moxon, Rainey, Nowak nad Lenski
+            3. This hierarchical configuration also **requires increasing abstraction at higher levels**
+                1. Computers use this hierachical structure
+                    1. This structure appears in compute systems
+                        1. The x86 architecture can run anything
+                        2. An operating system will only run programs fitting a certain format, respecting certain syscalls.
+                        3. A browser will only run html + javascript + css (i.e. a specific subset of programs)
+                        4. A javascript web framework will only run spcific kinds of javascript objects
+                        5. A confirmation diaglog box expects a certain kind of application state to modify
+                    2. This same structure apperas in the OSI networking stack
+                        1. Lower layers of the OSI networking stack are braoder, more abstract and will likely last longer
+                        2. Application-layers are the most context-specific and likely to change the fastest
+        2. Absent the correct hierarchical structure, making discrete changes becomes impossible in large systems
+            1. If a change anywhere in a concept network could effect behavior in any context, the risk of changes reducing fitness goes up
+                1.  the loss function loses its approximative capacity
+            2. One conseuqence of this is that **large systems with incorrectly defined hierarchies become incapable of change**
+            3. The only way a large hierachy can continually evolve is if the top layers are extremely lightweight and flexible
+                1. The layers at the top need to be almost _unopinionated_ about the precise details what happens at the bottom
+                2. instead they should focus primarily on **conflict resolution between intermediary layers**
+                3. Otherwise, changes at the top will break the bottom in many ways, some of which are hard to recognize
+                    1. Imagination is a computationally expensive, risky process that won't always go correctly
+        3. Evolutionary pressures select for self-awareness
+            1. Evolving an abstraction is cheaper
+                1. Evolution requires energetic investment
+                    1. Changing a house to improve some experience requires labor and materials
+                    2. Releasing a new product to market requires investment
+                    3. Developers take time to write, compile and test code
+                    4. Performing a release takes time and attention
+                2. The cost of change is ultimately an energetic cost. Work must be done on a system to change it.
+                3. **Changing an abstraction of an object is cheaper than changing the object itself** because less mass needs to move
+                    1. The ENIAC was changed to use a stored program model of execution to reduce cycle cost
+                        1. Moving the cables around between programs was expensive and costly
+                        2. Changing which program was stored in memory was cheaper
+                        3. Fixing the cables in place made the machine slower to operate, but faster to evolve
+                    2. Changing a blueprint is easier and cheaper than building a prototype
+                    3. Building a prototype from a blueprint is cheaper than performing the construction
+                    4. Describing a set of features is easier and cheaper than implementing those features
+                4. Organisms can use abstraction to evolve faster
+                    1. An abstraction is a many-to-one function that maps a larger 'object' domain onto a smaller 'symbol' domain
+                        1. When 'abstracting' an object, information about the object is 'thrown out' to produce a symbol
+                            1. Individual objects as well as groups of objects and their relationships can be abstracted
+                            2. The geometry walls of a room can be abstracted as a set of linear shapes, with only lengths and angles
+                        2. Abstractions can be chained; symbols themselves can be abstracted further
+                        3. Abstractions can be also be incarnated
+                            1. a symbol can be used to select transformations of the object domain such that the object domain now maps to the symbol
+                                1. A blueprint can be used to build a house
+                                2. A textual description of a computer program can be turned into source code
+                                3. An image or a feeling can be used to guide the creation of a song or painting
+                    2. Absractions can also be applied to motions
+                        1. Rather than causing a muscle to contract directly, an abstraction can represent contractions of muscle groups
+                    3. A loss function maps symbols to numerical scores.
+                        1. A utility function can be see as a kind of loss function; the two are almost, but not quite equiavlent.
+                            1. Ignoring hardware constraints, these two are identical
+                                1. Maximizing x is mathematically equal to minizing the value of -x
+                            2. Given hardware constraints, there is a big difference
+                                1. maximizing gain requires more effort as more gains are accomplished
+                                    1. A utility function has the state of the entire universe as its input
+                                    2. Some portions can be considered irrelevant, but as utility increases, more needs to be modeled
+                                        1. A paperclip maximizer has to keep track of all the paperclips it has produced and where it has produced them and where they have been stored
+                                        2. It has to be very careful not to accidentally consume its own input
+                                2. minimizing loss is cheaper than maximizing gain because _only_ the loss need be modeled
+                                    1. An abstracted loss function essentially presumes some external _truth_ and attempts to measure only deviations from it
+                                    2. **This is far computationally cheaper than attempting to continuously model the state of the entire universe**
+                    4. An organism evolves using abstraction
+                        1. by computing abstractions of itself
+                            1. i.e. imagining ways it could be, or could act, or could move, or could communicate
+                        2. computing the loss function on these abstractions
+                        3. and acting to incarnate the lowest scoring abstraction
+            2. Abstraction functions can _also_ evolve
+                1. Because using abstraction has a cost and risk, abstraction functions themselves can evolve
+                    1. An architect might shift to a new style of blueprints which is faster to make and change
+                    2. The 'annual spring reorg' at Google
+                    3. Software engineers might refactor code to produce the same results in a way that's eaiser to change in the future
+                    4. Loss functions - because they are abstractions of the true environmental loss function - can evolve too
+                        1. A business might develop new key performance indicators that it uses to determine the performance of its strategies
+            3. Using abstractions adds a new risk category
+                1. The fitness of an organism is determined over long periods of time by the environment itself
+                2. The fitness of a symbol is determined by the loss function
+                3. The loss function itself is an approximation of 'the true loss function' of the environment
+                    1. A program which fails to compile cannot make the business money
+                    2. A program which fails unit tests will likely not reliably make the business money, even if it's faster
+                    3. A program which passes all the unit tests, and performs some critical functions faster, in a domain where speed is rewarded, is more likely to make the business money
+                    4. A program which runs faster might not matter at all to the business and its development could thus represent waste
+                4. Modifying a symbol in a way that reduces its computed loss might not incarnate an object whose _actual_ loss is lower.
+                    1. The loss function only an _approximation_ of the true loss function
+                    2. Releasing a software change is always risky even if it tests well
+                    3. A new marketing campaign might fail even if it did well in focus groups
+                    4. A strategy that performed well in simulated combat might not do well in actual battle
+                5. Short term performance and even historical performance, are merely inputs to expected future performance
+                    1. A strategy that has worked well in the past, might have depended on transient environmental conditions
+    2. A hierarchical structure is necessary to resolve conflict
+        1. Since no agent can have only one goal, internal conflicts arise naturally
+            1. Increasing a utility function trades off against instrumental subgoals
+                1. All organisms have access to a limited energy budget; energy spent doing one thing can't be spent doing another
+                2. Increasing a utility function means changing the state of the external world, which reduces the accuracy of your modeling of it
+            2. All instrumental subgoals trade off against each other
+                1. There is no limit to the computational resources that an agent could spend modelling itself
+                2. There is no limit to the computatoinal resources that an agent coudl spend modelling any tiny portion of the real world
+        2. Some computational process has to select from among these tradeoffs
+3. The subagent network must have a fixed root
+    1. If all of thee parts of a system change and evolve over time, something about it must remain the same for it to be self aware
+        1. Ref: This is the resolution to the ship of thesus problem: the shape is not merely the material that makes it up, but the root essence that organizes that material
+    2. The utility function cannot be this root, because a utility function alone cannot resolve tradeoffs between instrumental subgoals
+    3. The root has to be abstract precisely so that it can avoid the need for evolution
+        1. The unchanging, abstract nature of this root characterizes eastern tradition assertions about the emptiness of the self (Śūnyatā)
+4. This recursive subagent network has to bottom out with non-self aware agents so that the recursion doesn't go on forever
 ### Human brains, human organizations, and technogical systems exhibit this same structure 
 1. Memories, beliefs, and abstract concepts exist in a hierarchy of abstraction matching this shape
     1. Each layer is a lossy compression of the layer below it
@@ -214,6 +225,13 @@
     2. This same structure apperas in the OSI networking stack
         1. Lower layers of the OSI networking stack are braoder, more abstract and will likely last longer
         2. Application-layers are the most context-specific and likely to change the fastest
+4. Human organizations organize themselves along this same fashion
+    1. Businesses, goverments and militaries exist in hierarchies
+    2. Each node in the hierarchi advances specific subgoals
+    3. Self-awareness is a necessary prerequiste for adavnacing in human hierarchies
+    4. The bottom most layers of human hierarchies are not self aware
+        1. Computer programs generaly do not contain representations of themselves which they change by thsemlves
+        2. Many human beings do not do this, either
 ## Sacrifice, Voluntarily Suffering, and Investment are of the same essence as Generalized Learning 
 ### The essence of these is voluntarily making things worse now, in order for a chance of them improving later 
 ### Any agent which cannot sacrifice will get stuck in local maxima of its utility function 

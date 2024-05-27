@@ -83,15 +83,7 @@ convergent_subgoals = A("self-aware agents require convergent instrumental subgo
    ])
 
 strategies_evolve = A("Self-aware agents must continouously evolve in order to survive", [
-    A("some organisms - those that live in specific, static niches - do not need to change much over time in order to survive.", [
-      E("This includes most animals"), # is this actually true or would it be better to describe niches in terms of how frequently they change?
-      E("This includes human beings pre sedentary shift, in periods of long-term static culture")
-     ]),
-    A("other organisms operate in **dynamic niches**  (i.e., niches that change over time), which **requires them to evolve their strategies** in order to survive. They must be self-aware.", [
-      E("businesses in competitive industries"),
-      E("human beings in dynamic situations"),
-      E("political structures in times of change"),
-    ]),
+    A("Environments change over time, agents change too, so their self-representations must evolve"),
     A("Evolving a belief system means changing beliefs, i.e. learning and unlearning concepts."),
     A("It is difficult to get these changes right.", [
       A("Failing to change means death because the environment changes in ways that break your strategy"),
@@ -149,7 +141,11 @@ model_values =  A("The fact/value distinction is more useful as a spectrum", [
 
 
 sufficiently_adavnced_agents = A("Numerous propertries attributed to AI systems really describe all self-aware agents", [
-   D("An agent is self-aware if it makes use of a representation of itself, its environment, and its goals, and it can change this representation"),
+   D("An agent is self-aware if it makes use of a representation of itself, its environment, and its goals, and it can change this representation", [
+     A("An agent cannot be self aware if it does not contain a representation of itself"),
+     A("An agent's relationship to its environment is an integral part of itself, as its its goal"),
+     A("Any static representation of a dynamic system will drift out of alignment and fail to be accurate"),
+    ]),
     convergent_subgoals,
     strategies_evolve
   
