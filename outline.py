@@ -3,25 +3,15 @@ from framework import Argument
 from strategies import strategies_evolve
 from hierarchy import hierarchy_improves_evolution
 from sacrifice import sacrifice_is_necessary
+from trust import trust_is_necessary
 
 root = Argument(
   "There is an optimal value system.",
   supports = [
     strategies_evolve,
     hierarchy_improves_evolution,
+    trust_is_necessary,
     sacrifice_is_necessary,
-    Argument(
-      "Trust in the organizing principle of the group "\
-          "is necessary for group cohesion"
-    ),
-    Argument(
-      'The evolutionary limit of "trust in the organizing principle" is '\
-          "trusting reality itself."
-    ),
-    Argument(
-      'Trusting reality itself motivates faith, hope, and love '\
-          'as instrumental strategies.'
-    )
   ]
 )
 

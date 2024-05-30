@@ -5,7 +5,7 @@ from framework import Reference as R
 
 from software import software_evolves_faster 
 
-root = "Self-aware agents must comprise a specific hierarchical structure"
+root = "Self-aware agents require a specific hierarchical structure"
 
 
 human_cognitive_structure_is_hierarchical =  A("Memories, beliefs, and abstract concepts exist in a hierarchy of abstraction matching this shape", [
@@ -163,7 +163,7 @@ optimal_structure = A("The necessary structure for a self-aware agent is a recur
         A("Subagent representations are necsesary for an agent to advance or evolve its implementation of any of its subgoals",  [
          A("Any computational process that advances a goal is an agent"),
          A("Self aware agents must advance their utilty function as well as numerous convergent instrumental subgoals"),
-         A("a self-aware agent must include sub-agents tasked with promoting its instrumental subgoals, or else it cannot meet the requirements for self awareness"),
+         A("A self-aware agent must include sub-agents tasked with promoting its instrumental subgoals, or else it cannot meet the requirements for self awareness"),
       ])
     ]),
     A("The subagent network must be hierarchical", [
@@ -185,10 +185,26 @@ human_organizations_do_this = A("Human organizations organize themselves along t
    ]),
  ])
 
-hierarchy_improves_evolution = A(
-  root,  [
-      optimal_structure,
-      A("Human brains, human organizations, and technogical systems exhibit this same structure", [
+
+root_as_resource_allocator_monitor = A("The root agent must be a resource allactor", [
+  A("Self-aware agents comprising networks of subagents will have conflicting demands on internal resources", [
+    A("Convergent instrumental subgoals are never finished and can use aribtrary amounts of resources")
+    ]),
+  A("These conflicts have to be resolved by the root agent", [
+    A("This is tautological. Whatever process selects from among competing plans can be considered an agent, even if it isn't explicitly encoded"),
+    A("Self-aware agents have to explicitly encode this process, or they cannot evolve it"),
+    E("In a human brain, this is minimizing free energy among subnetworks", [
+      R("Summary of Friston's Free Energy Framework", url="https://slatestarcodex.com/2018/03/04/god-help-us-lets-try-to-understand-friston-on-free-energy/"),
+      A("Note that this happens for humans, without any effort on their part"),
+      A("Certain meditative practices develop a software representation of this emotional regulation process", [
+        R("Chappana Sutta", url="https://www.accesstoinsight.org/tipitaka/sn/sn35/sn35.206.than.html")
+        ]),
+      ])
+    ]),
+ ])
+
+
+existing_evidence = A("Human brains, human organizations, and technogical systems exhibit this same structure", [
       human_cognitive_structure_is_hierarchical,
       repeated_abstraction_generates_hierarches,
       A("Numerous schools of psychotherapy see human beings as consisting of subpersonalities", [
@@ -198,6 +214,13 @@ hierarchy_improves_evolution = A(
       computers_already_do_this,
       human_organizations_do_this
    ])
+
+hierarchy_improves_evolution = A(
+  root,  [
+      optimal_structure,
+      root_as_resource_allocator_monitor,
+      existing_evidence
+      
   ]
 )
 

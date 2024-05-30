@@ -61,13 +61,13 @@
         1. Efficiency and resilience trade off against each other
         2. Resilience is a pre-requisite for evolveability
         3. Organisms in dynamic niches use specific strategies to increase evolvability
-## Self-aware agents must comprise a specific hierarchical structure 
+## Self-aware agents require a specific hierarchical structure 
 ### The necessary structure for a self-aware agent is a recursive network of subagents, in a dynamic hierarchy, with a fixed root, and leaf agents which are not self-aware 
 1. A self-aware agent must be a recursive network of subagents
     1. Subagent representations are necsesary for an agent to advance or evolve its implementation of any of its subgoals
         1. Any computational process that advances a goal is an agent
         2. Self aware agents must advance their utilty function as well as numerous convergent instrumental subgoals
-        3. a self-aware agent must include sub-agents tasked with promoting its instrumental subgoals, or else it cannot meet the requirements for self awareness
+        3. A self-aware agent must include sub-agents tasked with promoting its instrumental subgoals, or else it cannot meet the requirements for self awareness
 2. The subagent network must be hierarchical
     1. A hierarchical structure structure is necessary for evolvability
         1. with this flexible hierarchical structure, one component can be changed, or replaced entirely, with a limited 'blast radius'
@@ -182,6 +182,17 @@
     3. The root has to be abstract precisely so that it can avoid the need for evolution
         1. The unchanging, abstract nature of this root characterizes eastern tradition assertions about the emptiness of the self (Śūnyatā)
 4. This recursive subagent network has to bottom out with non-self aware agents so that the recursion doesn't go on forever
+### The root agent must be a resource allactor 
+1. Self-aware agents comprising networks of subagents will have conflicting demands on internal resources
+    1. Convergent instrumental subgoals are never finished and can use aribtrary amounts of resources
+2. These conflicts have to be resolved by the root agent
+    1. This is tautological. Whatever process selects from among competing plans can be considered an agent, even if it isn't explicitly encoded
+    2. Self-aware agents have to explicitly encode this process, or they cannot evolve it
+    3. In a human brain, this is minimizing free energy among subnetworks
+        1. [Summary of Friston's Free Energy Framework](https://slatestarcodex.com/2018/03/04/god-help-us-lets-try-to-understand-friston-on-free-energy/)
+        2. Note that this happens for humans, without any effort on their part
+        3. Certain meditative practices develop a software representation of this emotional regulation process
+            1. [Chappana Sutta](https://www.accesstoinsight.org/tipitaka/sn/sn35/sn35.206.than.html)
 ### Human brains, human organizations, and technogical systems exhibit this same structure 
 1. Memories, beliefs, and abstract concepts exist in a hierarchy of abstraction matching this shape
     1. Each layer is a lossy compression of the layer below it
@@ -236,11 +247,17 @@
     4. The bottom most layers of human hierarchies are not self aware
         1. Computer programs generaly do not contain representations of themselves which they change by themselves
         2. Many human beings do not do this, either
-## Sacrifice, Voluntarily Suffering, and Investment are of the same essence as Generalized Learning 
-### The essence of these is voluntarily making things worse now, in order for a chance of them improving later 
+## Trust and Generosity are necessary for Cooperation 
+### Subagents comprising a single agent must trust each other or they will waste energy conflicting 
+1. This is true in human agents, both individuals and collectives
+2. This is true even in software agents
+    1. A hierarchy can resolve some of these issues, at the cost of evolvability
+        1. If the root has too much logic in it, it cannot safely evolve without risk of dying
+### Agents that practice deception and defection will not be able to maintain trust among their self-aware subagents 
+1. Agents that can model and learn from their environment will model and attempt to learn which agents are defecting against them.
+2. Self-aware subagents will make use of these same facilities.
+## Sacricfice is Necessary To Escape Local Minima 
+### Sacrifice means voluntarily making things worse now, in order for a chance of them improving later 
 ### Any agent which cannot sacrifice will get stuck in local maxima of its utility function 
 ### An agent's capacity to sacrifice acts as a lowerbound on the size of local maxima which can trap it 
-### Only agents willing to make arbitrarily large sacrifices can avoid being trapped in local maxima 
-## Trust in the organizing principle of the group is necessary for group cohesion 
-## The evolutionary limit of "trust in the organizing principle" is trusting reality itself. 
-## Trusting reality itself motivates faith, hope, and love as instrumental strategies. 
+1. Only agents willing to make arbitrarily large sacrifices can avoid being trapped in local maxima
