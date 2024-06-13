@@ -4,7 +4,7 @@ from framework import Example as E
 from framework import Reference as R
 
 
-root = "Belief systems are strategies"
+root = "Refactoring Code is the same kind of thing as Philosophizing"
 
 valiant_reference = R("Probably Approximately Correct, Leslie Valiant")
 
@@ -154,9 +154,10 @@ sufficiently_adavnced_agents = A("Numerous propertries attributed to AI systems 
 strategies_evolve = A(root, [
     beliefs_are_strategies,
     A("Animals, humans, businesses, governments and AI's are examples of increasingly complex strategies", [
-      valiant_reference
+      valiant_reference,
+      sufficiently_adavnced_agents,
     ]),
-    sufficiently_adavnced_agents,
+    A("Finding simpler ways to express the same strategy allows for faster future evolution")
    ])
 
 

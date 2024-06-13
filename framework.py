@@ -89,6 +89,13 @@ def spaces_per_level(level:int):
   return ((level-HEADER_LEVELS)*4)*' '
 
 
+# narratives are the top-level structures that arguments support
+
+class Narrative(Argument): pass
+
+# a question is often the most compelling argument
+class Question(Argument): pass
+
 # an Example is another kind of argument
 # we denote these explicitly for a number of reasons
 class Example(Argument): pass

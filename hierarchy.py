@@ -5,7 +5,7 @@ from framework import Reference as R
 
 from software import software_evolves_faster 
 
-root = "Self-aware agents require a specific hierarchical structure"
+root = "Self-aware agents require a specific hierarchical structure which matches this refactoring limit"
 
 
 human_cognitive_structure_is_hierarchical =  A("Memories, beliefs, and abstract concepts exist in a hierarchy of abstraction matching this shape", [
