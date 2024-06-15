@@ -326,4 +326,4 @@
 ### The church-turing thesis says these two approaches are equivalent and merely expressed differently (i.e. a process of transformation vs a specific relationship) 
 ## Clean code refactoring would be a viable strategy if and only if it corresponded to reality itself 
 ### A strategy can only work if it accurately reflects the true relationship between the organism and its enviroment 
-### If cleaner code actually survives and thrives in more hostile, changing in environments, this is evidence of the truth of claims this code implicitly makes about the relatinship between agent and environment 
+### If cleaner code actually survives and thrives in more hostile, changing environments, this is evidence of the truth of claims this code implicitly makes about the relatinship between agent and environment 
