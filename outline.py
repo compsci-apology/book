@@ -42,7 +42,14 @@ root = Argument(
      Narrative("Clean Code Requires Hierarchy", [  
         Argument("Grouping together concrete instances implicitly constructs a hierarchy"),
         Argument("Grouping together abstract groups recurisvely extends this hierarchy"),
-        Argument("Without a hierarchy of abstract concepts, you cannot recognize the commonality between concrete situations")
+        Argument("Without a hierarchy of abstract concepts, you cannot recognize the commonality between concrete situations"), 
+        Argument("With this hierarchy, evolution becomes safer", [
+          Argument("Changes can be made more freely at lower layers, which are context specific and have less risk of damager"),
+          Argument("Changes that don't perform well in small-scale trials can be dropped"),
+          Argument("Changes that work can be tried in more environments"),
+          Argument("Changes that work in multiple environments can be 'drawn up' the hierarchy"),
+          Argument("The root of the hierarchy will thus evolve far more slowly, only after lots of evidence that similar changes worked across numerous environments"),
+        ]),
      ]),
      Narrative("Clean Code Requires Essences", [
       Argument("Recursively Grouping concrete instances requires increasingly abstract concepts"),
@@ -60,8 +67,8 @@ root = Argument(
        sacrifice_is_necessary,
      ]),
     ]),
-    Narrative("Refactoring tends towards a limit", [
-      Argument("Taking this pattern to the limit suggests an 'endpoint' to refactoring", [
+    Narrative("Clean code has a 'limit' form", [
+      Argument("Taking the pattern of clean code to the limit suggests an 'endpoint' to clean code", [
         Argument("Each layer of abstraction becomes more abstract and more general than the layers below it"),
         Argument("The topmost layer of abstract would have to be transcendental", [
           Argument("It would have to apply in all contexts; if it did not, another layer could be constructed atop", [
@@ -73,14 +80,26 @@ root = Argument(
         ]),
         Argument("The topmost layer would therefore have to be 'good' as experiened from within", [
           Argument("otherwise it would not drive all actions")
-        ])
+        ]),
+        hierarchy_improves_evolution
       ]),
-      Argument("The limit point of refactoring bears a strong resemblance to numerous mystic traditions"),
-      Argument("The limit point of refactoring would be a viable strategy if and only if it corresponded to reality itself", [
-        Argument("A strategy can only work if it accurately reflects the true relationship between the organism and its enviroment")
+    ]),
+    Argument("The values that produce clean code bear a strong resemblance to numerous mystic traditions", [
+      Argument("The confusing, numinous claims made about the nature of idenity and reality can be understood as abstract classes at the root of an inheritance hierarchy"),
+      Argument("Western traditions claiming life has an abstract telos, and all our actions should flow form it, match this structure ", [
+        Argument("The telos of the philosophy corresponds to the entry point of the program"),
+        Argument("A philosphy advocating a 'specific relaitonship with God' would correspond to a program that processes 'requests' from an external hierarchical structure encoding a larger telos", [
+          Argument("This type of philosophy would encode the asusmption that an agent's idael strategy is also one of congruence with its operating environment")
+         ]),
+        Argument("A philosophy without a telos leads either to a disintegration of numerous subdrives (and internal conflict), or code with a telos which sees the machine on which it runs as being at odds with its environment")
       ]),
-      hierarchy_improves_evolution
-    ])
+      Argument("Eastern traditions resemble functional programming languages, which, rather than define a process, define an ideal relationship between sense and action"),
+      Argument("The church-turing thesis says these two approaches are equivalent and merely expressed differently (i.e. a process of transformation vs a specific relationship)")
+    ]),
+    Argument("Clean code refactoring would be a viable strategy if and only if it corresponded to reality itself", [
+        Argument("A strategy can only work if it accurately reflects the true relationship between the organism and its enviroment"),
+        Argument("If cleaner code actually survives and thrives in more hostile, changing in environments, this is evidence of the truth of claims this code implicitly makes about the relatinship between agent and environment")
+   ]),
   ]
 )
 
