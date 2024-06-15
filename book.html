@@ -140,58 +140,85 @@
 </ol>
 <h2>You Must Refactor,  or You Will Die.</h2>
 <ol class="section">
-<li>You must change strategies keep up with enviornmental shifts, or you will die.</li>
+<li>You must change strategies to keep up with enviornmental shifts, or you will die.</li>
 <ol class="hidden-section">
+<li>No environment is stable forever</li>
+<ol class="hidden-section">
+    <li>There are no examples of closed systems in physics; energy always leaks through</li>
+</ol><span class="see-more-button">See more</span>
 <li>No concrete strategy works indefinitely in a compeitive environment</li>
 </ol><span class="see-more-button">See more</span>
 <li>Every change in strategy is risky and could possibly kill you</li>
-<li>Velocity and Risk trade off against each other. </li>
+<li>Velocity of changing, and risk of bad changes trade off against each other. </li>
 <ol class="hidden-section">
 <li>If you change (i.e. learn, grow) more quickly, you have a higher risk of making mistakes, learning falsely, shipping bad code</li>
 </ol><span class="see-more-button">See more</span>
 <li>Refactoring to cleaner code, or a cleaner coherent philosophy, pushes this tradeoff curve in</li>
+<ol class="hidden-section">
+<li>This will be explained in further sections</li>
+</ol><span class="see-more-button">See more</span>
 <li>How does this work? And why is it possible?</li>
 </ol>
-<h2>Refactoring Requires Hierarchy</h2>
+<h2>Cleaner Code Evolves Better</h2>
 <ol class="section">
+<li>A specific style of code - clean code - is better at enabling the safe evolution of new features</li>
+<ol class="hidden-section">
+<li>Code is clean when</li>
+<ol class="hidden-section">
+    <li>its purpose is obvious</li>
+    <li>its structure is unambiguous</li>
+    <li>it consists of a hierarchy of layers</li>
+    <li>with concrete details subservient to abstract purposes</li>
+</ol><span class="see-more-button">See more</span>
+</ol><span class="see-more-button">See more</span>
+<li>Clean Code Requires Hierarchy</li>
+<ol class="hidden-section">
 <li>Grouping together concrete instances implicitly constructs a hierarchy</li>
 <li>Grouping together abstract groups recurisvely extends this hierarchy</li>
 <li>Without a hierarchy of abstract concepts, you cannot recognize the commonality between concrete situations</li>
-</ol>
-<h2>Refactoring Requires Essences</h2>
-<ol class="section">
+</ol><span class="see-more-button">See more</span>
+<li>Clean Code Requires Essences</li>
+<ol class="hidden-section">
 <li>Recursively Grouping concrete instances requires increasingly abstract concepts</li>
 <li>Ascending the hierarchy of concepts leads to increasingly abstract, general concepts with broader applicability</li>
-</ol>
-<h2>Refactoring Requires Trust</h2>
-<ol class="section">
+<li>The entry point of a program is akin to the 'highest good' of a philosophical system</li>
+<ol class="hidden-section">
+    <li>The entry point of a program is the root goal, from which other subgoals flow</li>
+    <li>Because programs are statements of intentionalty, the root of a program is a statement of the intended behvaior of the program</li>
+    <li>Any program is an expression of an intended relationship between input and output</li>
+    <li>Likewise, any belief system is an expression of an intended reletionship between experience and action</li>
+</ol><span class="see-more-button">See more</span>
+</ol><span class="see-more-button">See more</span>
+<li>Clean Code Requires Trust</li>
+<ol class="hidden-section">
 <li>Refactoring is expensive, risky and shows no immediate obvious results</li>
 <li>Trust and Generosity are necessary for Cooperation</li>
 <ol class="hidden-section">
-<li>Subagents comprising a single agent must trust each other or they will waste energy conflicting</li>
-<ol class="hidden-section">
-    <li>This is true in human agents, both individuals and collectives</li>
-    <li>This is true even in software agents</li>
+    <li>Subagents comprising a single agent must trust each other or they will waste energy conflicting</li>
     <ol class="hidden-section">
-        <li>A hierarchy can resolve some of these issues, at the cost of evolvability</li>
+        <li>This is true in human agents, both individuals and collectives</li>
+        <li>This is true even in software agents</li>
         <ol class="hidden-section">
-            <li>If the root has too much logic in it, it cannot safely evolve without risk of dying</li>
+            <li>A hierarchy can resolve some of these issues, at the cost of evolvability</li>
+            <ol class="hidden-section">
+                <li>If the root has too much logic in it, it cannot safely evolve without risk of dying</li>
+            </ol><span class="see-more-button">See more</span>
         </ol><span class="see-more-button">See more</span>
     </ol><span class="see-more-button">See more</span>
-</ol><span class="see-more-button">See more</span>
-<li>Agents that practice deception and defection will not be able to maintain trust among their self-aware subagents</li>
-<ol class="hidden-section">
-    <li>Agents that can model and learn from their environment will model and attempt to learn which agents are defecting against them.</li>
-    <li>Self-aware subagents will make use of these same facilities.</li>
-</ol><span class="see-more-button">See more</span>
+    <li>Agents that practice deception and defection will not be able to maintain trust among their self-aware subagents</li>
+    <ol class="hidden-section">
+        <li>Agents that can model and learn from their environment will model and attempt to learn which agents are defecting against them.</li>
+        <li>Self-aware subagents will make use of these same facilities.</li>
+    </ol><span class="see-more-button">See more</span>
 </ol><span class="see-more-button">See more</span>
 <li>Sacricfice is Necessary To Escape Local Minima</li>
 <ol class="hidden-section">
-<li>Sacrifice means voluntarily making things worse now, in order for a chance of them improving later</li>
-<li>Any agent which cannot sacrifice will get stuck in local maxima of its utility function</li>
-<li>An agent's capacity to sacrifice acts as a lowerbound on the size of local maxima which can trap it</li>
-<ol class="hidden-section">
-    <li>Only agents willing to make arbitrarily large sacrifices can avoid being trapped in local maxima</li>
+    <li>Sacrifice means voluntarily making things worse now, in order for a chance of them improving later</li>
+    <li>Any agent which cannot sacrifice will get stuck in local maxima of its utility function</li>
+    <li>An agent's capacity to sacrifice acts as a lowerbound on the size of local maxima which can trap it</li>
+    <ol class="hidden-section">
+        <li>Only agents willing to make arbitrarily large sacrifices can avoid being trapped in local maxima</li>
+    </ol><span class="see-more-button">See more</span>
 </ol><span class="see-more-button">See more</span>
 </ol><span class="see-more-button">See more</span>
 </ol>

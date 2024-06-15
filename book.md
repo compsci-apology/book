@@ -67,36 +67,51 @@
 3. Finding simpler ways to express the same strategy allows for faster future evolution
 ### Why would anyone do this? 
 ## You Must Refactor,  or You Will Die. 
-### You must change strategies keep up with enviornmental shifts, or you will die. 
-1. No concrete strategy works indefinitely in a compeitive environment
+### You must change strategies to keep up with enviornmental shifts, or you will die. 
+1. No environment is stable forever
+    1. There are no examples of closed systems in physics; energy always leaks through
+2. No concrete strategy works indefinitely in a compeitive environment
 ### Every change in strategy is risky and could possibly kill you 
-### Velocity and Risk trade off against each other.  
+### Velocity of changing, and risk of bad changes trade off against each other.  
 1. If you change (i.e. learn, grow) more quickly, you have a higher risk of making mistakes, learning falsely, shipping bad code
 ### Refactoring to cleaner code, or a cleaner coherent philosophy, pushes this tradeoff curve in 
+1. This will be explained in further sections
 ### How does this work? And why is it possible? 
-## Refactoring Requires Hierarchy 
-### Grouping together concrete instances implicitly constructs a hierarchy 
-### Grouping together abstract groups recurisvely extends this hierarchy 
-### Without a hierarchy of abstract concepts, you cannot recognize the commonality between concrete situations 
-## Refactoring Requires Essences 
-### Recursively Grouping concrete instances requires increasingly abstract concepts 
-### Ascending the hierarchy of concepts leads to increasingly abstract, general concepts with broader applicability 
-## Refactoring Requires Trust 
-### Refactoring is expensive, risky and shows no immediate obvious results 
-### Trust and Generosity are necessary for Cooperation 
-1. Subagents comprising a single agent must trust each other or they will waste energy conflicting
-    1. This is true in human agents, both individuals and collectives
-    2. This is true even in software agents
-        1. A hierarchy can resolve some of these issues, at the cost of evolvability
-            1. If the root has too much logic in it, it cannot safely evolve without risk of dying
-2. Agents that practice deception and defection will not be able to maintain trust among their self-aware subagents
-    1. Agents that can model and learn from their environment will model and attempt to learn which agents are defecting against them.
-    2. Self-aware subagents will make use of these same facilities.
-### Sacricfice is Necessary To Escape Local Minima 
-1. Sacrifice means voluntarily making things worse now, in order for a chance of them improving later
-2. Any agent which cannot sacrifice will get stuck in local maxima of its utility function
-3. An agent's capacity to sacrifice acts as a lowerbound on the size of local maxima which can trap it
-    1. Only agents willing to make arbitrarily large sacrifices can avoid being trapped in local maxima
+## Cleaner Code Evolves Better 
+### A specific style of code - clean code - is better at enabling the safe evolution of new features 
+1. Code is clean when
+    1. its purpose is obvious
+    2. its structure is unambiguous
+    3. it consists of a hierarchy of layers
+    4. with concrete details subservient to abstract purposes
+### Clean Code Requires Hierarchy 
+1. Grouping together concrete instances implicitly constructs a hierarchy
+2. Grouping together abstract groups recurisvely extends this hierarchy
+3. Without a hierarchy of abstract concepts, you cannot recognize the commonality between concrete situations
+### Clean Code Requires Essences 
+1. Recursively Grouping concrete instances requires increasingly abstract concepts
+2. Ascending the hierarchy of concepts leads to increasingly abstract, general concepts with broader applicability
+3. The entry point of a program is akin to the 'highest good' of a philosophical system
+    1. The entry point of a program is the root goal, from which other subgoals flow
+    2. Because programs are statements of intentionalty, the root of a program is a statement of the intended behvaior of the program
+    3. Any program is an expression of an intended relationship between input and output
+    4. Likewise, any belief system is an expression of an intended reletionship between experience and action
+### Clean Code Requires Trust 
+1. Refactoring is expensive, risky and shows no immediate obvious results
+2. Trust and Generosity are necessary for Cooperation
+    1. Subagents comprising a single agent must trust each other or they will waste energy conflicting
+        1. This is true in human agents, both individuals and collectives
+        2. This is true even in software agents
+            1. A hierarchy can resolve some of these issues, at the cost of evolvability
+                1. If the root has too much logic in it, it cannot safely evolve without risk of dying
+    2. Agents that practice deception and defection will not be able to maintain trust among their self-aware subagents
+        1. Agents that can model and learn from their environment will model and attempt to learn which agents are defecting against them.
+        2. Self-aware subagents will make use of these same facilities.
+3. Sacricfice is Necessary To Escape Local Minima
+    1. Sacrifice means voluntarily making things worse now, in order for a chance of them improving later
+    2. Any agent which cannot sacrifice will get stuck in local maxima of its utility function
+    3. An agent's capacity to sacrifice acts as a lowerbound on the size of local maxima which can trap it
+        1. Only agents willing to make arbitrarily large sacrifices can avoid being trapped in local maxima
 ## Refactoring tends towards a limit 
 ### Taking this pattern to the limit suggests an 'endpoint' to refactoring 
 1. Each layer of abstraction becomes more abstract and more general than the layers below it
