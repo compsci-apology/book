@@ -316,11 +316,12 @@
                 2. Many human beings do not do this, either
 ## The values that produce clean code bear a strong resemblance to numerous mystic traditions 
 ### The confusing, numinous claims made about the nature of idenity and reality can be understood as abstract classes at the root of an inheritance hierarchy 
-### Western traditions claiming life has an abstract telos, and all our actions should flow form it, match this structure  
+### Western traditions claiming life has an abstract telos, and all our actions should flow from it, match this structure  
 1. The telos of the philosophy corresponds to the entry point of the program
 2. A philosphy advocating a 'specific relaitonship with God' would correspond to a program that processes 'requests' from an external hierarchical structure encoding a larger telos
-    1. This type of philosophy would encode the asusmption that an agent's idael strategy is also one of congruence with its operating environment
-3. A philosophy without a telos leads either to a disintegration of numerous subdrives (and internal conflict), or code with a telos which sees the machine on which it runs as being at odds with its environment
+    1. This type of philosophy would encode the asusmption that an agent's ideal strategy is also one of congruence with its operating environment
+    2. e.g. it trusts the environment to provide it with what it needs to survive long term, and focuses on doing the best it can locally
+3. A philosophy without an external-trusting telos leads either to a disintegration of numerous subdrives (and internal conflict), or code with a telos which sees the machine on which it runs as being at odds with its environment
 ### Eastern traditions resemble functional programming languages, which, rather than define a process, define an ideal relationship between sense and action 
 ### The church-turing thesis says these two approaches are equivalent and merely expressed differently (i.e. a process of transformation vs a specific relationship) 
 ## Clean code refactoring would be a viable strategy if and only if it corresponded to reality itself 

@@ -86,12 +86,13 @@ root = Argument(
     ]),
     Argument("The values that produce clean code bear a strong resemblance to numerous mystic traditions", [
       Argument("The confusing, numinous claims made about the nature of idenity and reality can be understood as abstract classes at the root of an inheritance hierarchy"),
-      Argument("Western traditions claiming life has an abstract telos, and all our actions should flow form it, match this structure ", [
+      Argument("Western traditions claiming life has an abstract telos, and all our actions should flow from it, match this structure ", [
         Argument("The telos of the philosophy corresponds to the entry point of the program"),
         Argument("A philosphy advocating a 'specific relaitonship with God' would correspond to a program that processes 'requests' from an external hierarchical structure encoding a larger telos", [
-          Argument("This type of philosophy would encode the asusmption that an agent's idael strategy is also one of congruence with its operating environment")
+          Argument("This type of philosophy would encode the asusmption that an agent's ideal strategy is also one of congruence with its operating environment"),
+          Argument("e.g. it trusts the environment to provide it with what it needs to survive long term, and focuses on doing the best it can locally"),
          ]),
-        Argument("A philosophy without a telos leads either to a disintegration of numerous subdrives (and internal conflict), or code with a telos which sees the machine on which it runs as being at odds with its environment")
+        Argument("A philosophy without an external-trusting telos leads either to a disintegration of numerous subdrives (and internal conflict), or code with a telos which sees the machine on which it runs as being at odds with its environment")
       ]),
       Argument("Eastern traditions resemble functional programming languages, which, rather than define a process, define an ideal relationship between sense and action"),
       Argument("The church-turing thesis says these two approaches are equivalent and merely expressed differently (i.e. a process of transformation vs a specific relationship)")
